@@ -49,6 +49,30 @@
       "chainId": 97,
       "decimals": 18,
       "logoURI": "https://exchange.pancakeswap.finance/images/coins/0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c.png"
+    },
+    {
+      "name": "KABIR Token",
+      "symbol": "KSM",
+      "address": "0x93C5Fd28a4309b3505e037ec62123418246df165",
+      "chainId": 97,
+      "decimals": 18,
+      "logoURI": "https://exchange.pancakeswap.finance/images/coins/0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c.png"
+    },
+    {
+      "name": "SHUBHAM Token",
+      "symbol": "SHUBH",
+      "address": "0x4be160985F81942549C5e0A132E0e0ae7f64FEff",
+      "chainId": 97,
+      "decimals": 18,
+      "logoURI": "https://exchange.pancakeswap.finance/images/coins/0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c.png"
+    },
+    {
+      "name": "CHHOTA ANSHUL Token",
+      "symbol": "CHHOTA",
+      "address": "0x8efE4395DeC7f5A10a88934d8DDB5f7A2D34169D",
+      "chainId": 97,
+      "decimals": 18,
+      "logoURI": "https://exchange.pancakeswap.finance/images/coins/0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c.png"
     }
   ]
 }
