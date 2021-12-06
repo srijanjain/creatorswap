@@ -23,15 +23,12 @@ const config: MenuEntry[] = [
         label: 'Farms',
         href: '/farms',
       },
-      {
-        label: 'Chart',
-        href: 'https://dex.nhancv.com/0xE0dFffc2E01A7f051069649aD4eb3F518430B6a4',
-      },
-      {
-        label: 'Create Token',
-        href: '/create',
-      },
     ],
+  },
+  {
+    label: 'Create Token',
+    icon: 'HomeIcon',
+    href: '/create',
   },
 ]
 
