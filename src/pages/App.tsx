@@ -42,7 +42,6 @@ const BodyWrapper = styled.div`
   z-index: 1;
   justify-content: center;
   background-color: #42C0FB;
-  background-image: url('/images/group-pancake.svg');
   background-repeat: no-repeat;
   background-position: bottom 24px center;
   background-size: 90%;
