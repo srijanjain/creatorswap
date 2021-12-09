@@ -1,0 +1,51 @@
+.partl{
+    width: 45% !important;
+}
+
+.partm{
+    width: 10% !important;
+}
+
+.partr{
+    width: 45% !important;
+}
+
+.partlb{
+    width: 50% !important;
+}
+
+
+.partrb{
+    width: 50% !important;
+}
+
+.partb{
+    width: 60% !important;
+    margin-left: 20% !important;
+    margin-right: 20% !important;
+}
+
+.partb1{
+    margin-left: 20% !important;
+    margin-right: 20% !important;
+    width: 100% !important;
+}
+
+.partb2{
+    margin-left: 20% !important;
+    margin-right: 20% !important;
+    width: 60% !important;
+}
+
+
+
+.card{
+    width: 70% !important;
+}
+
+
+@media (max-width: 800px) {
+    .card{
+        width: 100% !important;
+    }
+}
