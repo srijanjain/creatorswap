@@ -4,27 +4,18 @@ const config: MenuEntry[] = [
   {
     label: 'Home',
     icon: 'HomeIcon',
-    href: '/',
+    href: '/home',
   },
   {
-    label: 'Trade',
+    label: 'Exchange',
     icon: 'TradeIcon',
-    initialOpenState: true,
-    items: [
-      {
-        label: 'Exchange',
-        href: '/swap',
-      },
-      {
-        label: 'Liquidity',
-        href: '/pool',
-      },
-      {
-        label: 'Farms',
-        href: '/farms',
-      },
-    ],
+    href: '/swap',
   },
+  {
+    label: 'Liquidity',
+    icon: 'TradeIcon',
+    href: '/pool',
+  },  
   {
     label: 'Create Token',
     icon: 'HomeIcon',
