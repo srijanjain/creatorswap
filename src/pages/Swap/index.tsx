@@ -364,6 +364,33 @@ const Swap = () => {
                 />
               </div>
               </Row>
+              <Row className={styles.partb}>
+                  <div className={styles.partb1}>
+                    <AdvancedSwapDetailsDropdown trade={trade} />
+                  </div>
+                  <div className={styles.partb2}>
+                    {showWrap ? null : (
+                    <AutoColumn gap="4px">
+                      {Boolean(trade) && (
+                        <RowBetween align="center">
+                          <Text fontSize="14px">{TranslateString(1182, 'Price')}</Text>
+                          <TradePrice
+                            price={trade?.executionPrice}
+                            showInverted={showInverted}
+                            setShowInverted={setShowInverted}
+                          />
+                        </RowBetween>
+                      )}
+                      {allowedSlippage !== INITIAL_ALLOWED_SLIPPAGE && (
+                        <RowBetween align="center">
+                          <Text fontSize="14px">{TranslateString(88, 'Slippage Tolerance')}</Text>
+                          <Text fontSize="14px">{allowedSlippage / 100}%</Text>
+                        </RowBetween>
+                      )}
+                    </AutoColumn>
+                    )}
+                  </div>
+              </Row>
 
               {recipient !== null && !showWrap ? (
                 <>
@@ -379,29 +406,9 @@ const Swap = () => {
                 </>
               ) : null}
 
-              {showWrap ? null : (
-                <Card>
-                  <AutoColumn gap="4px">
-                    {Boolean(trade) && (
-                      <RowBetween align="center">
-                        <Text fontSize="14px">{TranslateString(1182, 'Price')}</Text>
-                        <TradePrice
-                          price={trade?.executionPrice}
-                          showInverted={showInverted}
-                          setShowInverted={setShowInverted}
-                        />
-                      </RowBetween>
-                    )}
-                    {allowedSlippage !== INITIAL_ALLOWED_SLIPPAGE && (
-                      <RowBetween align="center">
-                        <Text fontSize="14px">{TranslateString(88, 'Slippage Tolerance')}</Text>
-                        <Text fontSize="14px">{allowedSlippage / 100}%</Text>
-                      </RowBetween>
-                    )}
-                  </AutoColumn>
-                </Card>
-              )}
+              
             </AutoColumn>
+            
             <BottomGrouping>
               {!account ? (
                 <ConnectWalletButton width="100%" />
@@ -489,8 +496,8 @@ const Swap = () => {
             </BottomGrouping>
           </PCard>
         </Wrapper>
+
       </Card>
-      <AdvancedSwapDetailsDropdown trade={trade} />
     </>
   )
 }
