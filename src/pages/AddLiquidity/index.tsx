@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/alt-text */
 import React, { useCallback, useState } from 'react'
 import { BigNumber } from '@ethersproject/bignumber'
 import { TransactionResponse } from '@ethersproject/providers'
@@ -293,6 +294,11 @@ export default function AddLiquidity({
     <>
       {/* <CardNav activeIndex={1} /> */}
       <Card className={styles.card}>
+        <img className={`${styles.card_img_top  } img-circle rounded-circle`} src="https://dummyimage.com/100x100/000/fff" />
+        <br />
+        <br />
+        <br />
+
         <AddRemoveTabs adding />
         <Wrapper>
               <Row className={styles.partb}>
