@@ -1,9 +1,11 @@
+/* eslint-disable import/no-duplicates */
 import { CurrencyAmount, JSBI, Token, Trade } from '@pancakeswap-libs/sdk'
 import React, { useCallback, useContext, useEffect, useMemo, useState } from 'react'
 import { ArrowDown } from 'react-feather'
-import { CardBody, ArrowDownIcon, Button, IconButton, Text } from '@pancakeswap-libs/uikit'
+import { CardBody, ArrowDownIcon, SyncAltIcon, Button, IconButton, Text } from '@pancakeswap-libs/uikit'
 import { ThemeContext } from 'styled-components'
 import AddressInputPanel from 'components/AddressInputPanel'
+
 import PCard, { GreyCard } from 'components/Card'
 import { AutoColumn } from 'components/Column'
 import ConfirmSwapModal from 'components/swap/ConfirmSwapModal'
@@ -11,6 +13,8 @@ import CurrencyInputPanel from 'components/CurrencyInputPanel'
 // import CardNav from 'components/CardNav'
 import { AutoRow, RowBetween } from 'components/Row'
 import AdvancedSwapDetailsDropdown from 'components/swap/AdvancedSwapDetailsDropdown'
+import  { TradeSummary  } from 'components/swap/AdvancedSwapDetails';
+
 import confirmPriceImpactWithoutFee from 'components/swap/confirmPriceImpactWithoutFee'
 import { ArrowWrapper, BottomGrouping, SwapCallbackError, Wrapper } from 'components/swap/styleds'
 import TradePrice from 'components/swap/TradePrice'
@@ -203,6 +207,7 @@ const Swap = () => {
   const [showInverted, setShowInverted] = useState<boolean>(false)
 
   // warnings on slippage
+  
   const priceImpactSeverity = warningSeverity(priceImpactWithoutFee)
 
   // show approve flow when: no error on inputs, not approved or pending, or approved in current session
@@ -338,7 +343,7 @@ const Swap = () => {
                       style={{ borderRadius: '50%' }}
                       scale="sm"
                     >
-                      <ArrowDownIcon color="primary" width="24px" />
+                      <SyncAltIcon color="primary" width="24px" />
                     </IconButton>
                   </ArrowWrapper>
                   {recipient === null && !showWrap && isExpertMode ? (
@@ -367,10 +372,8 @@ const Swap = () => {
               <Row className={styles.partb}>
                   <div className={styles.partb1}>
                     <AdvancedSwapDetailsDropdown trade={trade} />
-                  </div>
-                  <div className={styles.partb2}>
                     {showWrap ? null : (
-                    <AutoColumn gap="4px">
+                    <AutoColumn >
                       {Boolean(trade) && (
                         <RowBetween align="center">
                           <Text fontSize="14px">{TranslateString(1182, 'Price')}</Text>
@@ -389,6 +392,11 @@ const Swap = () => {
                       )}
                     </AutoColumn>
                     )}
+                  </div>
+                  <div className={styles.partb2}>
+                    <TradeSummary trade={trade} allowedSlippage={allowedSlippage} />
+
+                    
                   </div>
               </Row>
 
