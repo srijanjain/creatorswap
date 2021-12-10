@@ -17,13 +17,17 @@
     margin-top: 25% !important;
 }
 
-.partlb{
-    width: 50% !important;
+.partbl{
+    margin-left: 4% !important;
+    margin-right: 0% !important;
+    width: 45% !important;
 }
 
+.partbr{
+    margin-left: 10% !important;
+    margin-right: 4% !important;
 
-.partrb{
-    width: 50% !important;
+    width: 45% !important;
 }
 
 .partb{
@@ -41,7 +45,7 @@
 .partb2{
     margin-left: 10% !important;
     /* margin-right: 20% !important; */
-    width: 40% !important;
+    width: 60% !important;
 }
 
 .button{
@@ -55,6 +59,9 @@
     width: 80% !important;
     border-radius:  20px !important;
 }
+
+
+
 
 @media (max-width: 800px) {
     .card{
