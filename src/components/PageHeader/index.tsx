@@ -52,4 +52,21 @@ const PageHeader = ({ title, description, children }: PageHeaderProps) => {
   )
 }
 
+export const CustomPageHeader = ({ title, description, children }: PageHeaderProps) => {
+  return (
+    <StyledPageHeader>
+      <Flex alignItems="center">
+        <Details>
+          <Heading mb="8px">{title}</Heading>
+          {description && (
+            <Text color="textSubtle" fontSize="14px">
+              {description}
+            </Text>
+          )}
+        </Details>
+      </Flex>
+      {children && <Text mt="16px">{children}</Text>}
+    </StyledPageHeader>
+  )
+}
 export default PageHeader

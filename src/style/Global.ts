@@ -8,6 +8,10 @@ const GlobalStyle = createGlobalStyle`
       height: auto;
       max-width: 100%;
     }
+    .coin_icon{
+      height:100px;
+      width:100px;
+    }
   }
 `
 

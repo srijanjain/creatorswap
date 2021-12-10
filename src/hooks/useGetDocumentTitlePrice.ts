@@ -3,8 +3,8 @@ import useGetPriceData from './useGetPriceData'
 import { MEM } from '../constants'
 
 const useGetDocumentTitlePrice = () => {
-  const priceData = useGetPriceData();
-  let cakePriceUsd = 0;
+  const priceData = useGetPriceData()
+  let cakePriceUsd = 0
   try {
     cakePriceUsd = priceData ? parseFloat(priceData.data[MEM.address].price ?? 0) : 0
   } catch (e) {
@@ -20,7 +20,7 @@ const useGetDocumentTitlePrice = () => {
         })}`
 
   useEffect(() => {
-    document.title = `PancakeSwap${cakePriceUsdString}`
+    document.title = `CanvaSwap${cakePriceUsdString}`
   }, [cakePriceUsdString])
 }
 export default useGetDocumentTitlePrice
