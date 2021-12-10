@@ -333,6 +333,8 @@ const Swap = () => {
                   />
               </div>
               <div className={styles.partm}>
+              <div className={styles.synccontainer}>
+
                   <ArrowWrapper clickable>
                     <IconButton
                       variant="tertiary"
@@ -343,9 +345,13 @@ const Swap = () => {
                       style={{ borderRadius: '50%' }}
                       scale="sm"
                     >
+                      
                       <SyncAltIcon color="primary" width="24px" />
                     </IconButton>
+
                   </ArrowWrapper>
+                  </div>
+
                   {recipient === null && !showWrap && isExpertMode ? (
                     <LinkStyledButton id="add-recipient-button" onClick={() => onChangeRecipient('')}>
                       + Add a send (optional)
@@ -372,6 +378,7 @@ const Swap = () => {
               <Row className={styles.partb}>
                   <div className={styles.partb1}>
                     <AdvancedSwapDetailsDropdown trade={trade} />
+                    
                     {showWrap ? null : (
                     <AutoColumn >
                       {Boolean(trade) && (
@@ -395,8 +402,6 @@ const Swap = () => {
                   </div>
                   <div className={styles.partb2}>
                     <TradeSummary trade={trade} allowedSlippage={allowedSlippage} />
-
-                    
                   </div>
               </Row>
 
@@ -413,9 +418,9 @@ const Swap = () => {
                   <AddressInputPanel id="recipient" value={recipient} onChange={onChangeRecipient} />
                 </>
               ) : null}
-
-              
             </AutoColumn>
+
+            <div className={styles.button}>
             
             <BottomGrouping>
               {!account ? (
@@ -502,6 +507,8 @@ const Swap = () => {
               {showApproveFlow && <ProgressSteps steps={[approval === ApprovalState.APPROVED]} />}
               {isExpertMode && swapErrorMessage ? <SwapCallbackError error={swapErrorMessage} /> : null}
             </BottomGrouping>
+          </div>
+
           </PCard>
         </Wrapper>
 
