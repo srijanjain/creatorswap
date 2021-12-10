@@ -81,9 +81,7 @@ export default function Pool() {
         <AutoColumn gap="lg" justify="center" >
         <div/>
 
-        <Button id="join-pool-button" as={Link} to="/add/BNB" >
-            {TranslateString(168, 'Add Liquidity')}
-          </Button>
+        
           <Row className={styles.partb} >
             <div className={styles.partlb}>
               <AutoColumn gap="12px" style={{ width: '100%' }}>
@@ -138,6 +136,10 @@ export default function Pool() {
                   }
             </div>
           </Row>
+          
+          <Button id="join-pool-button" as={Link} to="/add/BNB" >
+            {TranslateString(168, 'Add Liquidity')}
+          </Button>
 
           <div>
             <Text fontSize="14px" style={{ padding: '.5rem 0 .5rem 0', textAlign: 'center' }}>
