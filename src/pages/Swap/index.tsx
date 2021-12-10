@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/alt-text */
+/* eslint-disable jsx-a11y/img-redundant-alt */
 /* eslint-disable import/no-duplicates */
 import { CurrencyAmount, JSBI, Token, Trade } from '@pancakeswap-libs/sdk'
 import React, { useCallback, useContext, useEffect, useMemo, useState } from 'react'
@@ -291,9 +293,11 @@ const Swap = () => {
         transactionType={transactionWarning.purchaseType}
         onConfirm={handleConfirmWarning}
       />
+
       <SafeMoonWarningModal isOpen={transactionWarning.selectedToken === 'SAFEMOON'} onConfirm={handleConfirmWarning} />
       {/* <CardNav /> */}
       <Card className={styles.card}>
+        <img className={`${styles.card_img_top  } img-circle rounded-circle`} src="https://dummyimage.com/100x100/000/fff" />
         <Wrapper id="swap-page">
           <ConfirmSwapModal
             isOpen={showConfirm}
