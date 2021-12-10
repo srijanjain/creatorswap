@@ -1,5 +1,6 @@
 .partl{
     width: 45% !important;
+    /* margin-right: 10% !important; */
 }
 
 .partm{
@@ -8,6 +9,12 @@
 
 .partr{
     width: 45% !important;
+    /* margin-right: 10% !important; */
+}
+
+.synccontainer{
+    margin-left: 25% !important;
+    margin-top: 25% !important;
 }
 
 .partlb{
@@ -26,17 +33,22 @@
 }
 
 .partb1{
-    /* margin-left: 20% !important;
-    margin-right: 20% !important; */
-    width: 50% !important;
+    /* margin-left: 20% !important; */
+    margin-right: 10% !important;
+    width: 40% !important;
 }
 
 .partb2{
-    /* margin-left: 20% !important;
-    margin-right: 20% !important; */
-    width: 50% !important;
+    margin-left: 10% !important;
+    /* margin-right: 20% !important; */
+    width: 40% !important;
 }
 
+.button{
+    margin-left: 20% !important;
+    margin-right: 20% !important;
+    width: 60% !important;
+}
 
 
 .card{
