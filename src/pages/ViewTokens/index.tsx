@@ -1,5 +1,5 @@
 import React from 'react'
-import { Card, Button, Container, Row, Col } from 'react-bootstrap'
+import { Container, Row, Col } from 'react-bootstrap'
 import CARDS from './cards.json'
 import './style.css'
 
@@ -7,7 +7,7 @@ export default function index() {
   return (
     <Container>
       <Row>
-        {CARDS.map((card, ind) => (
+        {CARDS.map((card) => (
           <Col md={6} lg={4}>
             <div className="card_custom">
               <div className="face face1">

@@ -1,14 +1,17 @@
 import React, { useState } from 'react'
-import { CardBody, Button, Text, Input } from '@pancakeswap-libs/uikit'
-import { BottomGrouping, Wrapper } from 'components/swap/styleds'
+import { Button, Text, Input } from '@pancakeswap-libs/uikit'
+import { BottomGrouping } from 'components/swap/styleds'
 import { useWeb3React } from '@web3-react/core'
 import { CustomPageHeader } from 'components/PageHeader'
-import { AutoColumn } from 'components/Column'
-import { AutoRow, RowBetween } from 'components/Row'
 import { ethers } from 'ethers'
+import { Col, Container, Row, Table, Card } from 'react-bootstrap'
+import QuestionHelper from 'components/QuestionHelper'
 import byteCode from 'constants/abis/byteCode'
 import STANDARD_TOKEN from '../../constants/abis/standard_token.json'
-import AppBody from '../AppBody'
+import './style.css'
+import Logo from '../../icons/swap_grey.svg'
+import Coin from '../../icons/coin.png'
+import ConfirmModal from './ConfirmModal'
 
 const totalSupply = 500000
 const LP_add = '0xBf8e4B7371441201Be0CEe545C8ac1B2746ff7C9'
@@ -19,13 +22,13 @@ const TokenCreate = () => {
   const [state, setState] = useState({
     tokenName: '',
     symbol: '',
-    description: '',
     pool: 15,
     holding: 10,
     ico: 70,
     airdrop: 5,
     contract: '',
   })
+  const [modal, setModal] = useState(false)
   const { library } = useWeb3React()
 
   const handleInput = (e) => {
@@ -52,53 +55,78 @@ const TokenCreate = () => {
       airdropAmount,
       icoAmount
     )
-    console.log(contract)
-
     setState({ ...state, contract: contract.address })
     await contract.deployTransaction.wait()
+    toggleModal()
   }
 
   const handleLiq = (e) => {
     const { name, value } = e.target
     const change = value - state[name]
-    setState({ ...state, [name]: value, ico: state.ico + change })
+    setState({ ...state, [name]: value, ico: state.ico - change })
+  }
+  const toggleModal = () => {
+    setModal(!modal)
   }
 
   return (
-    <AppBody>
-      <Wrapper id="swap-page">
-        <CustomPageHeader
-          title="Create Token"
-          description="Mint a personal or a community token on a fixed supply. To learn more about how to mint the token and how to use it, read the Token Minting Guide"
-        />
-        <CardBody>
-          {state.contract && (
-            <Text color="secondary" fontSize="25px">
-              Token Deployed Successfully @ {state.contract}
-            </Text>
-          )}
-          <RowBetween>
-            <AutoColumn gap="md">
-              <AutoRow gap="lg" justify="space-between">
-                <img src="images/pancakeswap.png" alt="coin" className="coin_icon" />
-                <AutoColumn justify="space-between" gap="lg">
-                  <RowBetween>
-                    <h4>LP:</h4> <h4>{state.pool}</h4>
-                  </RowBetween>
-                  <RowBetween>
-                    <h4>Holding:</h4> <h4>{state.holding}</h4>
-                  </RowBetween>
-                  <RowBetween>
-                    <h4>Airdrop:</h4> <h4>{state.airdrop}</h4>
-                  </RowBetween>
-                  <RowBetween>
-                    <h4>ICO:</h4> <h4>{state.ico}</h4>
-                  </RowBetween>
-                </AutoColumn>
-              </AutoRow>
-            </AutoColumn>
-            <AutoColumn gap="md">
-              <Text color="primary">Token Name</Text>
+    <>
+      <ConfirmModal isOpen={modal} onDismiss={toggleModal} contract={state.contract} />
+
+      <Card className="card">
+        <img className="card_img_top img-circle rounded-circle" src={Logo} alt="logo" />
+        <Container>
+          <Row>
+            <CustomPageHeader
+              title="Create Token"
+              description="Minst a personal or a community token on a fixed supply. To learn more about how to mint the token and how to use it, read the Token Minting Guide"
+            />
+          </Row>
+
+          <Row>
+            <Col xs={4}>
+              <Row className="h-100">
+                <Col className="align-items-center text-center d-flex" xs={4}>
+                  <img src={Coin} alt="coin" className="coin_icon" />
+                </Col>
+                <Col className="align-items-center  d-flex">
+                  <Table bordered responsive hover>
+                    <tbody>
+                      <tr>
+                        <td>LP</td>
+                        <td>
+                          {state.pool} %
+                          <QuestionHelper text="Use this tool to find pairs that do not automatically appear in the interface." />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>ICO</td>
+                        <td>
+                          {state.ico} %
+                          <QuestionHelper text="Use this tool to find pairs that do not automatically appear in the interface." />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Holding</td>
+                        <td>
+                          {state.holding} %
+                          <QuestionHelper text="Use this tool to find pairs that do not automatically appear in the interface." />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Air Drop</td>
+                        <td>
+                          {state.airdrop} %
+                          <QuestionHelper text="Use this tool to find pairs that do not automatically appear in the interface." />
+                        </td>
+                      </tr>
+                    </tbody>
+                  </Table>
+                </Col>
+              </Row>
+            </Col>
+            <Col className="p-3">
+              <Text className="text-purple">Token Name</Text>
               <Input
                 type="text"
                 placeholder="Token Name"
@@ -106,19 +134,19 @@ const TokenCreate = () => {
                 name="tokenName"
                 value={state.tokenName}
               />
-              <Text color="primary">Symbol</Text>
+              <Text className="text-purple mt-2">Symbol</Text>
               <Input type="text" placeholder="Symbol" onChange={handleInput} name="symbol" value={state.symbol} />
-              <RowBetween>
-                <AutoColumn gap="md">
-                  <Text color="primary">AirDrop</Text>
+              <Row className="mt-2">
+                <Col>
+                  <Text className="text-purple">AirDrop</Text>
                   <Input type="number" placeholder=" Airdrop" value={state.airdrop} disabled />
-                </AutoColumn>
-                <AutoColumn gap="md">
-                  <Text color="primary"> Pool</Text>
+                </Col>
+                <Col>
+                  <Text className="text-purple"> Pool</Text>
                   <Input type="number" placeholder=" Pool" onChange={handleLiq} name="pool" value={state.pool} />
-                </AutoColumn>
-                <AutoColumn gap="md">
-                  <Text color="primary"> Holding</Text>
+                </Col>
+                <Col>
+                  <Text className="text-purple"> Holding</Text>
                   <Input
                     type="number"
                     placeholder=" Holding"
@@ -126,26 +154,23 @@ const TokenCreate = () => {
                     name="holding"
                     value={state.holding}
                   />
-                </AutoColumn>
-              </RowBetween>
-              <Text color="primary">Description</Text>
-              <Input
-                type="textarea"
-                placeholder="Description"
-                onChange={handleInput}
-                name="description"
-                value={state.description}
-              />
+                </Col>
+              </Row>
               <BottomGrouping>
-                <Button width="100%" onClick={handleSubmit}>
+                <Button
+                  width="100%"
+                  className="bg-purple"
+                  onClick={handleSubmit}
+                  // disabled={state.pool < 15 || state.holding < 10 || state.ico < 0 || !state.tokenName || !state.symbol}
+                >
                   Create
                 </Button>
               </BottomGrouping>
-            </AutoColumn>
-          </RowBetween>
-        </CardBody>
-      </Wrapper>
-    </AppBody>
+            </Col>
+          </Row>
+        </Container>
+      </Card>
+    </>
   )
 }
 
