@@ -298,7 +298,6 @@ export default function AddLiquidity({
         <br />
         <br />
         <br />
-
         <AddRemoveTabs adding />
         <Wrapper>
               <Row className={styles.partb}>

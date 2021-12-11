@@ -1,0 +1,118 @@
+.partl{
+    width: 45% !important;
+    /* margin-right: 10% !important; */
+}
+
+.partm{
+    width: 2% !important;
+    margin-top:  7% !important;
+    margin-left: 0% !important;
+    margin-right: 1% !important;
+}
+
+.partr{
+    width: 45% !important;
+    /* margin-right: 10% !important; */
+}
+
+.synccontainer{
+    margin-left: 25% !important;
+    margin-top: 25% !important;
+}
+
+.partbl{
+    margin-left: 5% !important;
+    margin-right: 0% !important;
+    margin-top: 2% !important;
+
+    width: 45% !important;
+}
+
+.buttoncontainer{
+    width: 50% !important;
+    align-items: center !important;
+    margin-left: 25% !important;
+    margin-right: 25% !important;
+    padding-bottom: 3px !important;
+}
+
+.buttoncontainersmall{
+    width: 50% !important;
+    align-items: center !important;
+    margin-left: 40% !important;
+    margin-right: 25% !important;
+    padding-bottom: 3px !important;
+}
+
+
+.partbr{
+    /* margin-left: 10% !important; */
+    margin-right: 5% !important;
+    /* margin-top: 10px !important; */
+    width: 45% !important;
+}
+
+.partb{
+    width: 100% !important;
+    /* margin-left: 20% !important;
+    margin-right: 20% !important; */
+}
+
+.partb1{
+    /* margin-left: 20% !important; */
+    margin-right: 10% !important;
+    width: 40% !important;
+}
+
+.partb2{
+    margin-left: 10% !important;
+    /* margin-right: 20% !important; */
+    width: 60% !important;
+}
+
+.button{
+    margin-left: 20% !important;
+    margin-right: 20% !important;
+    width: 60% !important;
+}
+
+.card{
+    width: 80% !important;
+    border-radius:  20px !important;
+}
+
+.innerinnercardr{
+    margin: 1% !important;
+}
+
+.innercardl{
+    width: 46% !important;
+    border-radius:  29px !important;
+    margin-left: 2% !important;
+}
+
+.innercardr{
+    width: 46% !important;
+    border-radius:  29px !important;
+    margin-right: 2% !important;
+}
+
+.cardinner{
+    padding: 10px !important;
+}
+
+
+.card_img_top {
+    position: absolute;
+    top: -40px;
+    left: 49%;
+    margin-left: -30px;
+    width: 90px !important;
+    height: 90px;
+}
+
+@media (max-width: 800px) {
+    .card{
+        width: 100% !important;
+    }
+}
