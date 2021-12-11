@@ -1,9 +1,16 @@
-# 🥞 Pancake Swap Exchange
+# Polygon Network
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/c6ef7e73-4a84-410d-83b0-b89326787dff/deploy-status)](https://app.netlify.com/sites/swap-master/deploys)
+- Factory 	--> 		0xC538c0661C661571032798F40c1859a9255924D9
+- INIT HASH 	-->		0x148fcbc4533fccb7edad9d1a2ee78bae51efde862020bba525848fd153de376c
+- WETH 		--> 		0xBBdd6633Db277810e9066abA0A16aF602a0F156a
+- Router01 	--> 		0x4B556A2A032511718b1C569a1a53dDbCB3B703af
+- Main Router 	--> 		0xe1662823d8044254409eB682fE34d35792677228
 
-[PancakeSwap](https://pancakeswap.finance/) is an automated market maker (“**AMM**”) that allows two tokens to be exchanged on the [Binance Smart Chain](https://www.binance.org/en/smartChain) (BSC). It is fast, cheap, and allows anyone to participate.
+## Token Addresses
 
-This repo is responsible for the **exchange** interface of the AMM: [exchange.pancakeswap.finance](https://exchange.pancakeswap.finance/)
-
-If you want to contribute, please refer to the [contributing guidelines](./CONTRIBUTING.md) of this project.
+- Canvas Token 	--> 		0x76514486123bCdB30e324ED1a78b54b389Ea6769
+- Sandeep Coin 	-->		0x51F6c7Ad98B1a644452ECf05eDDCa70FD5ec0A30
+- Heemank Coin 	-->		0x31C6F857a19639f19A9460b6D6157A50CC77e77D
+- Anshul Coin 	-->		0x40fe25d7a6fa36fb99f0316b293eBD4762408ff4
+- Kabir Coin 	-->		0x29fcDa8965D417d7CE981e941c90b87099504AE9
+- Utsav Coin 	-->		0xb859980c32Da9b98FfF9B18CA04ee97D6bf10A8F
