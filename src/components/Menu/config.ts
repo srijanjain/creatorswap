@@ -30,6 +30,11 @@ const config: MenuEntry[] = [
     icon: 'HomeIcon',
     href: '/create',
   },
+  {
+    label: 'View Token',
+    icon: 'HomeIcon',
+    href: '/view',
+  },
 ]
 
 export default config

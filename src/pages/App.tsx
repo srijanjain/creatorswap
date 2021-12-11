@@ -8,6 +8,7 @@ import { RedirectDuplicateTokenIds, RedirectOldAddLiquidityPathStructure } from 
 import { RedirectOldRemoveLiquidityPathStructure } from './RemoveLiquidity/redirects'
 import AddLiquidity from './AddLiquidity'
 import TokenCreate from './TokenCreate'
+import ViewTokens from './ViewTokens'
 import Pool from './Pool'
 import PoolFinder from './PoolFinder'
 import RemoveLiquidity from './RemoveLiquidity'
@@ -114,6 +115,8 @@ export default function App() {
                       <Route exact strict path="/pool" component={Pool} />
                       <Route exact path="/add" component={AddLiquidity} />
                       <Route exact strict path="/create" component={TokenCreate} />
+                      <Route exact strict path="/view" component={ViewTokens} />
+
                       <Route exact strict path="/remove/:currencyIdA/:currencyIdB" component={RemoveLiquidity} />
 
                       {/* Redirection: These old routes are still used in the code base */}
