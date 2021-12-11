@@ -45,6 +45,8 @@ import Card from 'react-bootstrap/Card'
 import AppBody from '../AppBody';
 import styles from './styles.module.css';
 
+import Logo from "../../icons/swap_grey.svg";
+
 const Swap = () => {
   const loadedUrlParams = useDefaultsFromURLSearch()
   const TranslateString = useI18n()
@@ -297,7 +299,7 @@ const Swap = () => {
       <SafeMoonWarningModal isOpen={transactionWarning.selectedToken === 'SAFEMOON'} onConfirm={handleConfirmWarning} />
       {/* <CardNav /> */}
       <Card className={styles.card}>
-        <img className={`${styles.card_img_top  } img-circle rounded-circle`} src="https://dummyimage.com/100x100/000/fff" />
+        <img className={`${styles.card_img_top  } img-circle rounded-circle`} src={Logo} />
         <Wrapper id="swap-page">
           <ConfirmSwapModal
             isOpen={showConfirm}

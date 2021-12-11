@@ -82,8 +82,6 @@ export default function PoolFinder() {
   return (
     <>
       {/* <CardNav activeIndex={1} /> */}
-      <h1>yeh hai liquidity 3</h1>
-
       <AppBody>
         <FindPoolTabs />
         <CardBody>

@@ -47,6 +47,7 @@ import { useUserDeadline, useUserSlippageTolerance } from '../../state/user/hook
 
 import styles from './styles.module.css';
 
+import Logo from "../../icons/liquidity_grey.svg";
 
 const OutlineCard = styled.div`
   border: 1px solid ${({ theme }) => theme.colors.borderColor};
@@ -456,9 +457,8 @@ export default function RemoveLiquidity({
         <br />
         <br />
         <br />
-
       <Card className={styles.card}>
-        <img className={`${styles.card_img_top  } img-circle rounded-circle`} src="https://dummyimage.com/100x100/000/fff" />
+        <img className={`${styles.card_img_top  } img-circle rounded-circle`} src={Logo} />
         <br />
         <br />
         <br />

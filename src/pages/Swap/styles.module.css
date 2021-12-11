@@ -60,11 +60,12 @@
 
 .card_img_top {
     position: absolute;
-    top: -40px;
-    left: 49%;
+    top: -300px;
+    left: 48.2%;
     margin-left: -30px;
-    width: 90px !important;
-    height: 90px;
+    width: 600px !important;
+    height: 600px;
+
 }
 
 @media (max-width: 800px) {

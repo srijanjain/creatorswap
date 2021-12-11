@@ -25,6 +25,7 @@ import PageHeader from 'components/PageHeader'
 import Card from 'react-bootstrap/Card'
 import AppBody from '../AppBody'
 import styles from './styles.module.css';
+import Logo from "../../icons/liquidity_grey.svg";
 
 
 
@@ -70,7 +71,7 @@ export default function Pool() {
     <>
       {/* <CardNav activeIndex={1} /> */}
       <Card className={styles.card}>
-        <img className={`${styles.card_img_top  } img-circle rounded-circle`} src="https://dummyimage.com/100x100/000/fff" />
+        <img className={`${styles.card_img_top  } img-circle rounded-circle`} src={Logo} />
         <br />
         <br />
 
@@ -156,7 +157,6 @@ export default function Pool() {
         </AutoColumn>
         
       </Card>
-      <h1>yeh hai liquidity 2</h1>
 
     </>
   )
