@@ -14,63 +14,55 @@
       "name": "WBNB Token",
       "symbol": "WBNB",
       "address": "0xD34C1b38D04880a4782a2008D9bCDFa4402e4dCA",
-      "chainId": 97,
+      "chainId": 80001,
       "decimals": 18,
       "logoURI": "https://exchange.pancakeswap.finance/images/coins/0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c.png"
     },
     {
-      "name": "MEMBORO Token",
-      "symbol": "MEM",
-      "address": "0x4B556A2A032511718b1C569a1a53dDbCB3B703af",
-      "chainId": 97,
+      "name": "Canvas Token",
+      "symbol": "Can",
+      "address": "0x76514486123bCdB30e324ED1a78b54b389Ea6769",
+      "chainId": 80001,
       "decimals": 18,
       "logoURI": "https://exchange.pancakeswap.finance/images/coins/0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c.png"
     },
     {
       "name": "ANSHUL Token",
-      "symbol": "ANJ",
-      "address": "0xe1662823d8044254409eB682fE34d35792677228",
-      "chainId": 97,
+      "symbol": "CHHOTA",
+      "address": "0x40fe25d7a6fa36fb99f0316b293eBD4762408ff4",
+      "chainId": 80001,
       "decimals": 18,
       "logoURI": "https://exchange.pancakeswap.finance/images/coins/0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c.png"
     },
     {
       "name": "SANDY Token",
       "symbol": "SANDY",
-      "address": "0x6dbbFBF5e5A291d6397B3dc2410d4257947288fF",
-      "chainId": 97,
+      "address": "0x51F6c7Ad98B1a644452ECf05eDDCa70FD5ec0A30",
+      "chainId": 80001,
       "decimals": 18,
       "logoURI": "https://exchange.pancakeswap.finance/images/coins/0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c.png"
     },
     {
       "name": "UTSAV Token",
-      "symbol": "UTSI",
-      "address": "0x9e174afba0efe8E1a54212F823fCbebB88C88698",
-      "chainId": 97,
+      "symbol": "UTS",
+      "address": "0xb859980c32Da9b98FfF9B18CA04ee97D6bf10A8F",
+      "chainId": 80001,
       "decimals": 18,
       "logoURI": "https://exchange.pancakeswap.finance/images/coins/0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c.png"
     },
     {
       "name": "KABIR Token",
       "symbol": "KSM",
-      "address": "0x93C5Fd28a4309b3505e037ec62123418246df165",
-      "chainId": 97,
+      "address": "0x29fcDa8965D417d7CE981e941c90b87099504AE9",
+      "chainId": 80001,
       "decimals": 18,
       "logoURI": "https://exchange.pancakeswap.finance/images/coins/0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c.png"
     },
     {
-      "name": "SHUBHAM Token",
-      "symbol": "SHUBH",
-      "address": "0x4be160985F81942549C5e0A132E0e0ae7f64FEff",
-      "chainId": 97,
-      "decimals": 18,
-      "logoURI": "https://exchange.pancakeswap.finance/images/coins/0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c.png"
-    },
-    {
-      "name": "CHHOTA ANSHUL Token",
-      "symbol": "CHHOTA",
-      "address": "0x8efE4395DeC7f5A10a88934d8DDB5f7A2D34169D",
-      "chainId": 97,
+      "name": "Heemank Coin",
+      "symbol": "heemv",
+      "address": "0x31C6F857a19639f19A9460b6D6157A50CC77e77D",
+      "chainId": 80001,
       "decimals": 18,
       "logoURI": "https://exchange.pancakeswap.finance/images/coins/0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c.png"
     }

@@ -1,21 +1,20 @@
 import { ChainId, JSBI, Percent, Token, WETH } from '@pancakeswap-libs/sdk'
 
-export const ROUTER_ADDRESS = '0x5CF874C2f969a53b75d18e9e719c65120000dD5E'
+export const ROUTER_ADDRESS = '0xe1662823d8044254409eB682fE34d35792677228'
 
 // a list of tokens by chain
 type ChainTokenList = {
   readonly [chainId in ChainId]: Token[]
 }
 
-export const MEM = new Token(ChainId.BSCTESTNET, '0x4B556A2A032511718b1C569a1a53dDbCB3B703af', 18, 'MEM', 'Memboro Token')
-export const WBNB = new Token(ChainId.BSCTESTNET, '0x0dE8FCAE8421fc79B29adE9ffF97854a424Cad09', 18, 'WBNB', 'Wrapped BNB')
-export const ANJ = new Token(ChainId.BSCTESTNET, '0xe1662823d8044254409eB682fE34d35792677228', 18, 'ANJ', 'Anjaan Token')
-export const SANDY = new Token(ChainId.BSCTESTNET, '0x6dbbFBF5e5A291d6397B3dc2410d4257947288fF', 18, 'SANDY', 'SAndy coin')
-export const UTSI = new Token(ChainId.BSCTESTNET, '0x9e174afba0efe8E1a54212F823fCbebB88C88698', 18, 'UTSI', 'Utsav Token')
-export const KSM = new Token(ChainId.BSCTESTNET, '0x93C5Fd28a4309b3505e037ec62123418246df165', 18, 'KSM', 'KABIR Token')
-export const SHUBH = new Token(ChainId.BSCTESTNET, '0x4be160985F81942549C5e0A132E0e0ae7f64FEff', 18, 'SHUBH', 'Shubham coin')
-export const CHHOTA = new Token(ChainId.BSCTESTNET, '0x8efE4395DeC7f5A10a88934d8DDB5f7A2D34169D', 18, 'CHHOTA', 'CHOTTA ANSHUL coin')
-export const ETH = new Token(ChainId.BSCTESTNET, '0xE282a15DBad45e3131620C1b8AF85B7330Cb3b4B', 18, 'ETH', 'Binance-Peg Ethereum Token')
+export const Can = new Token(ChainId.BSCTESTNET, '0x76514486123bCdB30e324ED1a78b54b389Ea6769', 18, 'CAN', 'Canvas Token')
+export const WBNB = new Token(ChainId.BSCTESTNET, '0xD34C1b38D04880a4782a2008D9bCDFa4402e4dCA', 18, 'WBNB', 'Wrapped BNB')
+export const heemv = new Token(ChainId.BSCTESTNET, '0x31C6F857a19639f19A9460b6D6157A50CC77e77D', 18, 'HEEMV', 'Heemank Token')
+export const SANDY = new Token(ChainId.BSCTESTNET, '0x51F6c7Ad98B1a644452ECf05eDDCa70FD5ec0A30', 18, 'SANDY', 'Sandy coin')
+export const UTS = new Token(ChainId.BSCTESTNET, '0xb859980c32Da9b98FfF9B18CA04ee97D6bf10A8F', 18, 'UTS', 'Utsav Token')
+export const KSM = new Token(ChainId.BSCTESTNET, '0x29fcDa8965D417d7CE981e941c90b87099504AE9', 18, 'KSM', 'KABIR Token')
+export const CHHOTA = new Token(ChainId.BSCTESTNET, '0x40fe25d7a6fa36fb99f0316b293eBD4762408ff4', 18, 'CHHOTA', 'CHOTTA ANSHUL coin')
+// export const ETH = new Token(ChainId.BSCTESTNET, '0xE282a15DBad45e3131620C1b8AF85B7330Cb3b4B', 18, 'ETH', 'Binance-Peg Ethereum Token')
 
 const WETH_ONLY: ChainTokenList = {
   [ChainId.MAINNET]: [WETH[ChainId.MAINNET]],
@@ -25,7 +24,7 @@ const WETH_ONLY: ChainTokenList = {
 // used to construct intermediary pairs for trading
 export const BASES_TO_CHECK_TRADES_AGAINST: ChainTokenList = {
   ...WETH_ONLY,
-  [ChainId.BSCTESTNET]: [...WETH_ONLY[ChainId.BSCTESTNET], ANJ, SANDY, UTSI, ETH, KSM, SHUBH, CHHOTA],
+  [ChainId.BSCTESTNET]: [...WETH_ONLY[ChainId.BSCTESTNET], SANDY, UTS, KSM, CHHOTA, heemv, Can],
 }
 
 /**
@@ -39,20 +38,19 @@ export const CUSTOM_BASES: { [chainId in ChainId]?: { [tokenAddress: string]: To
 // used for display in the default list when adding liquidity
 export const SUGGESTED_BASES: ChainTokenList = {
   ...WETH_ONLY,
-  [ChainId.BSCTESTNET]: [...WETH_ONLY[ChainId.BSCTESTNET], ANJ, SANDY, UTSI,KSM, SHUBH, CHHOTA],
+  [ChainId.BSCTESTNET]: [...WETH_ONLY[ChainId.BSCTESTNET], SANDY, UTS, KSM, CHHOTA, heemv, Can],
 }
 
 // used to construct the list of all pairs we consider by default in the frontend
 export const BASES_TO_TRACK_LIQUIDITY_FOR: ChainTokenList = {
   ...WETH_ONLY,
-  [ChainId.BSCTESTNET]: [...WETH_ONLY[ChainId.BSCTESTNET], ANJ, SANDY, UTSI, KSM, SHUBH, CHHOTA],
+  [ChainId.BSCTESTNET]: [...WETH_ONLY[ChainId.BSCTESTNET], SANDY, UTS, KSM, CHHOTA, heemv, Can],
 }
 
 export const PINNED_PAIRS: { readonly [chainId in ChainId]?: [Token, Token][] } = {
   [ChainId.BSCTESTNET]: [
-    [MEM, WBNB],
-    [SANDY, UTSI],
-    [ANJ, UTSI],
+    [Can, WBNB],
+    [SANDY, UTS],
   ],
 }
 

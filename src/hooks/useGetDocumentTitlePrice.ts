@@ -1,12 +1,12 @@
 import { useEffect } from 'react'
 import useGetPriceData from './useGetPriceData'
-import { MEM } from '../constants'
+import { Can } from '../constants'
 
 const useGetDocumentTitlePrice = () => {
   const priceData = useGetPriceData();
   let cakePriceUsd = 0;
   try {
-    cakePriceUsd = priceData ? parseFloat(priceData.data[MEM.address].price ?? 0) : 0
+    cakePriceUsd = priceData ? parseFloat(priceData.data[Can.address].price ?? 0) : 0
   } catch (e) {
     // Ignore
   }
