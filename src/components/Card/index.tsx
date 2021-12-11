@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-const Card = styled.div<any>`
+const PCard = styled.div<any>`
   width: 100%;
   border-radius: 16px;
   padding: 1.25rem;
@@ -8,13 +8,13 @@ const Card = styled.div<any>`
   border: ${({ border }) => border};
   border-radius: ${({ borderRadius }) => borderRadius};
 `
-export default Card
+export default PCard
 
-export const LightCard = styled(Card)`
+export const LightCard = styled(PCard)`
   border: 1px solid ${({ theme }) => theme.colors.invertedContrast};
   background-color: ${({ theme }) => theme.colors.invertedContrast};
 `
 
-export const GreyCard = styled(Card)`
+export const GreyCard = styled(PCard)`
   background-color: ${({ theme }) => theme.colors.tertiary};
 `

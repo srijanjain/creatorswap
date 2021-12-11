@@ -1,16 +1,22 @@
+/* eslint-disable jsx-a11y/alt-text */
+/* eslint-disable jsx-a11y/img-redundant-alt */
+/* eslint-disable import/no-duplicates */
 import { CurrencyAmount, JSBI, Token, Trade } from '@pancakeswap-libs/sdk'
 import React, { useCallback, useContext, useEffect, useMemo, useState } from 'react'
 import { ArrowDown } from 'react-feather'
-import { CardBody, ArrowDownIcon, Button, IconButton, Text } from '@pancakeswap-libs/uikit'
+import { CardBody, ArrowDownIcon, SyncAltIcon, Button, IconButton, Text } from '@pancakeswap-libs/uikit'
 import { ThemeContext } from 'styled-components'
 import AddressInputPanel from 'components/AddressInputPanel'
-import Card, { GreyCard } from 'components/Card'
+
+import PCard, { GreyCard } from 'components/Card'
 import { AutoColumn } from 'components/Column'
 import ConfirmSwapModal from 'components/swap/ConfirmSwapModal'
 import CurrencyInputPanel from 'components/CurrencyInputPanel'
-import CardNav from 'components/CardNav'
+// import CardNav from 'components/CardNav'
 import { AutoRow, RowBetween } from 'components/Row'
 import AdvancedSwapDetailsDropdown from 'components/swap/AdvancedSwapDetailsDropdown'
+import  { TradeSummary  } from 'components/swap/AdvancedSwapDetails';
+
 import confirmPriceImpactWithoutFee from 'components/swap/confirmPriceImpactWithoutFee'
 import { ArrowWrapper, BottomGrouping, SwapCallbackError, Wrapper } from 'components/swap/styleds'
 import TradePrice from 'components/swap/TradePrice'
@@ -18,7 +24,7 @@ import TokenWarningModal from 'components/TokenWarningModal'
 import SyrupWarningModal from 'components/SyrupWarningModal'
 import SafeMoonWarningModal from 'components/SafeMoonWarningModal'
 import ProgressSteps from 'components/ProgressSteps'
-
+import Row from 'react-bootstrap/Row';
 import { INITIAL_ALLOWED_SLIPPAGE } from 'constants/index'
 import { useActiveWeb3React } from 'hooks'
 import { useCurrency } from 'hooks/Tokens'
@@ -35,7 +41,11 @@ import Loader from 'components/Loader'
 import useI18n from 'hooks/useI18n'
 import PageHeader from 'components/PageHeader'
 import ConnectWalletButton from 'components/ConnectWalletButton'
-import AppBody from '../AppBody'
+import Card from 'react-bootstrap/Card'
+import AppBody from '../AppBody';
+import styles from './styles.module.css';
+
+import Logo from "../../icons/swap_grey.svg";
 
 const Swap = () => {
   const loadedUrlParams = useDefaultsFromURLSearch()
@@ -201,6 +211,7 @@ const Swap = () => {
   const [showInverted, setShowInverted] = useState<boolean>(false)
 
   // warnings on slippage
+  
   const priceImpactSeverity = warningSeverity(priceImpactWithoutFee)
 
   // show approve flow when: no error on inputs, not approved or pending, or approved in current session
@@ -284,9 +295,11 @@ const Swap = () => {
         transactionType={transactionWarning.purchaseType}
         onConfirm={handleConfirmWarning}
       />
+
       <SafeMoonWarningModal isOpen={transactionWarning.selectedToken === 'SAFEMOON'} onConfirm={handleConfirmWarning} />
-      <CardNav />
-      <AppBody>
+      {/* <CardNav /> */}
+      <Card className={styles.card}>
+        <img className={`${styles.card_img_top  } img-circle rounded-circle`} src={Logo} />
         <Wrapper id="swap-page">
           <ConfirmSwapModal
             isOpen={showConfirm}
@@ -302,28 +315,32 @@ const Swap = () => {
             onDismiss={handleConfirmDismiss}
           />
           <PageHeader
-            title={TranslateString(8, 'Exchange')}
+            title={TranslateString(8, 'Swap')}
             description={TranslateString(1192, 'Trade tokens in an instant')}
           />
-          <CardBody>
+          <PCard >
             <AutoColumn gap="md">
-              <CurrencyInputPanel
-                label={
-                  independentField === Field.OUTPUT && !showWrap && trade
-                    ? TranslateString(194, 'From (estimated)')
-                    : TranslateString(76, 'From')
-                }
-                value={formattedAmounts[Field.INPUT]}
-                showMaxButton={!atMaxAmountInput}
-                currency={currencies[Field.INPUT]}
-                onUserInput={handleTypeInput}
-                onMax={handleMaxInput}
-                onCurrencySelect={handleInputSelect}
-                otherCurrency={currencies[Field.OUTPUT]}
-                id="swap-currency-input"
-              />
-              <AutoColumn justify="space-between">
-                <AutoRow justify={isExpertMode ? 'space-between' : 'center'} style={{ padding: '0 1rem' }}>
+              <Row>
+                <div className={styles.partl}>
+                  <CurrencyInputPanel
+                    label={
+                      independentField === Field.OUTPUT && !showWrap && trade
+                        ? TranslateString(194, 'From (estimated)')
+                        : TranslateString(76, 'From')
+                    }
+                    value={formattedAmounts[Field.INPUT]}
+                    showMaxButton={!atMaxAmountInput}
+                    currency={currencies[Field.INPUT]}
+                    onUserInput={handleTypeInput}
+                    onMax={handleMaxInput}
+                    onCurrencySelect={handleInputSelect}
+                    otherCurrency={currencies[Field.OUTPUT]}
+                    id="swap-currency-input"
+                  />
+              </div>
+              <div className={styles.partm}>
+              <div className={styles.synccontainer}>
+
                   <ArrowWrapper clickable>
                     <IconButton
                       variant="tertiary"
@@ -334,30 +351,65 @@ const Swap = () => {
                       style={{ borderRadius: '50%' }}
                       scale="sm"
                     >
-                      <ArrowDownIcon color="primary" width="24px" />
+                      
+                      <SyncAltIcon color="primary" width="24px" />
                     </IconButton>
+
                   </ArrowWrapper>
+                  </div>
+
                   {recipient === null && !showWrap && isExpertMode ? (
                     <LinkStyledButton id="add-recipient-button" onClick={() => onChangeRecipient('')}>
                       + Add a send (optional)
                     </LinkStyledButton>
                   ) : null}
-                </AutoRow>
-              </AutoColumn>
-              <CurrencyInputPanel
-                value={formattedAmounts[Field.OUTPUT]}
-                onUserInput={handleTypeOutput}
-                label={
-                  independentField === Field.INPUT && !showWrap && trade
-                    ? TranslateString(196, 'To (estimated)')
-                    : TranslateString(80, 'To')
-                }
-                showMaxButton={false}
-                currency={currencies[Field.OUTPUT]}
-                onCurrencySelect={handleOutputSelect}
-                otherCurrency={currencies[Field.INPUT]}
-                id="swap-currency-output"
-              />
+              </div>
+              <div className={styles.partr}>
+                <CurrencyInputPanel
+                  value={formattedAmounts[Field.OUTPUT]}
+                  onUserInput={handleTypeOutput}
+                  label={
+                    independentField === Field.INPUT && !showWrap && trade
+                      ? TranslateString(196, 'To (estimated)')
+                      : TranslateString(80, 'To')
+                  }
+                  showMaxButton={false}
+                  currency={currencies[Field.OUTPUT]}
+                  onCurrencySelect={handleOutputSelect}
+                  otherCurrency={currencies[Field.INPUT]}
+                  id="swap-currency-output"
+                />
+              </div>
+              </Row>
+              <Row className={styles.partb}>
+                  <div className={styles.partb1}>
+                    <AdvancedSwapDetailsDropdown trade={trade} />
+                    
+                    {showWrap ? null : (
+                    <AutoColumn >
+                      {Boolean(trade) && (
+                        <RowBetween align="center">
+                          <Text fontSize="14px">{TranslateString(1182, 'Price')}</Text>
+                          <TradePrice
+                            price={trade?.executionPrice}
+                            showInverted={showInverted}
+                            setShowInverted={setShowInverted}
+                          />
+                        </RowBetween>
+                      )}
+                      {allowedSlippage !== INITIAL_ALLOWED_SLIPPAGE && (
+                        <RowBetween align="center">
+                          <Text fontSize="14px">{TranslateString(88, 'Slippage Tolerance')}</Text>
+                          <Text fontSize="14px">{allowedSlippage / 100}%</Text>
+                        </RowBetween>
+                      )}
+                    </AutoColumn>
+                    )}
+                  </div>
+                  <div className={styles.partb2}>
+                    <TradeSummary trade={trade} allowedSlippage={allowedSlippage} />
+                  </div>
+              </Row>
 
               {recipient !== null && !showWrap ? (
                 <>
@@ -372,30 +424,10 @@ const Swap = () => {
                   <AddressInputPanel id="recipient" value={recipient} onChange={onChangeRecipient} />
                 </>
               ) : null}
-
-              {showWrap ? null : (
-                <Card padding=".25rem .75rem 0 .75rem" borderRadius="20px">
-                  <AutoColumn gap="4px">
-                    {Boolean(trade) && (
-                      <RowBetween align="center">
-                        <Text fontSize="14px">{TranslateString(1182, 'Price')}</Text>
-                        <TradePrice
-                          price={trade?.executionPrice}
-                          showInverted={showInverted}
-                          setShowInverted={setShowInverted}
-                        />
-                      </RowBetween>
-                    )}
-                    {allowedSlippage !== INITIAL_ALLOWED_SLIPPAGE && (
-                      <RowBetween align="center">
-                        <Text fontSize="14px">{TranslateString(88, 'Slippage Tolerance')}</Text>
-                        <Text fontSize="14px">{allowedSlippage / 100}%</Text>
-                      </RowBetween>
-                    )}
-                  </AutoColumn>
-                </Card>
-              )}
             </AutoColumn>
+
+            <div className={styles.button}>
+            
             <BottomGrouping>
               {!account ? (
                 <ConnectWalletButton width="100%" />
@@ -481,10 +513,12 @@ const Swap = () => {
               {showApproveFlow && <ProgressSteps steps={[approval === ApprovalState.APPROVED]} />}
               {isExpertMode && swapErrorMessage ? <SwapCallbackError error={swapErrorMessage} /> : null}
             </BottomGrouping>
-          </CardBody>
+          </div>
+
+          </PCard>
         </Wrapper>
-      </AppBody>
-      <AdvancedSwapDetailsDropdown trade={trade} />
+
+      </Card>
     </>
   )
 }

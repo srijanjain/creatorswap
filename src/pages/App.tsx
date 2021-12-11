@@ -18,6 +18,9 @@ import { EN, allLanguages } from '../constants/localisation/languageCodes'
 import { LanguageContext } from '../hooks/LanguageContext'
 import { TranslationsContext } from '../hooks/TranslationsContext'
 
+import 'bootstrap/dist/css/bootstrap.css';
+// import'bootstrap/dist/css/bootstrap-theme.css';
+
 import Menu from '../components/Menu'
 import useGetDocumentTitlePrice from '../hooks/useGetDocumentTitlePrice'
 
@@ -39,7 +42,7 @@ const BodyWrapper = styled.div`
   overflow-x: hidden;
   z-index: 1;
   justify-content: center;
-  background-image: url('/images/group-pancake.svg');
+  background-color: #14163B;
   background-repeat: no-repeat;
   background-position: bottom 24px center;
   background-size: 90%;
@@ -49,8 +52,7 @@ const BodyWrapper = styled.div`
   }
 
   ${({ theme }) => theme.mediaQueries.lg} {
-    background-image: url('/images/arch-${({ theme }) => (theme.isDark ? 'dark' : 'light')}.svg'),
-      url('/images/left-pancake.svg'), url('/images/right-pancake.svg');
+    background-image: url('/images/arch-${({ theme }) => (theme.isDark ? 'dark' : 'light')}.svg');
     background-repeat: no-repeat;
     background-position: center 420px, 10% 230px, 90% 230px;
     background-size: contain, 266px, 266px;
