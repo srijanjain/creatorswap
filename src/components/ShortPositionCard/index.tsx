@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { JSBI, Pair, Percent } from '@pancakeswap-libs/sdk'
-import { Button, Card as UIKitCard, CardBody, Text } from '@pancakeswap-libs/uikit'
+import { Button, Card as UIKitCard, CardBody, Text } from '@canvaswap-libs/uikit'
 import { darken } from 'polished'
 import { ChevronDown, ChevronUp } from 'react-feather'
 import { Link } from 'react-router-dom'
@@ -71,7 +71,7 @@ export function MinimalPositionCard({ pair, showUnwrapped = false }: PositionCar
                   </Text>
                 </RowFixed>
               </FixedHeightRow>
-              <FixedHeightRow >
+              <FixedHeightRow>
                 <RowFixed>
                   <DoubleCurrencyLogo currency0={currency0} currency1={currency1} margin size={20} />
                   <Text fontSize="14px">
@@ -147,7 +147,7 @@ export default function FullPositionCard({ pair }: PositionCardProps) {
   return (
     <HoverCard>
       <AutoColumn gap="12px">
-        <FixedHeightRow  style={{ cursor: 'pointer' }}>
+        <FixedHeightRow style={{ cursor: 'pointer' }}>
           <RowFixed>
             <DoubleCurrencyLogo currency0={currency0} currency1={currency1} margin size={20} />
             <Text>{!currency0 || !currency1 ? <Dots>Loading</Dots> : `${currency0.symbol}/${currency1.symbol}`}</Text>

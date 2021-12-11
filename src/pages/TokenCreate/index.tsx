@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Button, Text, Input } from '@pancakeswap-libs/uikit'
+import { Button, Text, Input } from '@canvaswap-libs/uikit'
 import { BottomGrouping } from 'components/swap/styleds'
 import { useWeb3React } from '@web3-react/core'
 import { CustomPageHeader } from 'components/PageHeader'

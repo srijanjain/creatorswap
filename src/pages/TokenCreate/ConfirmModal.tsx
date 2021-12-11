@@ -1,6 +1,6 @@
 import Modal from 'components/Modal'
 import React from 'react'
-import { Button, Text, Input } from '@pancakeswap-libs/uikit'
+import { Button, Text, Input } from '@canvaswap-libs/uikit'
 
 import { Col, Container, Row } from 'react-bootstrap'
 

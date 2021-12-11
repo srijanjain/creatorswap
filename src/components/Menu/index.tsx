@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { Menu as UikitMenu} from '@pancakeswap-libs/uikit'
+import { Menu as UikitMenu } from '@canvaswap-libs/uikit'
 import { useWeb3React } from '@web3-react/core'
 import { allLanguages } from 'constants/localisation/languageCodes'
 import { LanguageContext } from 'hooks/LanguageContext'
@@ -15,7 +15,7 @@ const Menu: React.FC = (props) => {
   const { selectedLanguage, setSelectedLanguage } = useContext(LanguageContext)
   const { isDark, toggleTheme } = useTheme()
   const priceData = useGetPriceData()
-  let cakePriceUsd = 0;
+  let cakePriceUsd = 0
   try {
     cakePriceUsd = priceData ? Number(priceData.data['0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82'].price ?? 0) : 0
   } catch (e) {

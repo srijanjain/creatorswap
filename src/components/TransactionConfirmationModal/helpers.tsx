@@ -1,8 +1,7 @@
 import React, { ReactNode } from 'react'
 import styled from 'styled-components'
-import { Heading, IconButton, CloseIcon } from '@pancakeswap-libs/uikit'
+import { Heading, IconButton, CloseIcon } from '@canvaswap-libs/uikit'
 import { AutoColumn, ColumnCenter } from '../Column'
-
 
 export const Wrapper = styled.div`
   width: 100%;

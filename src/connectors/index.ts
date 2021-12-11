@@ -1,4 +1,4 @@
-import { ConnectorNames } from '@pancakeswap-libs/uikit'
+import { ConnectorNames } from '@canvaswap-libs/uikit'
 import { Web3Provider } from '@ethersproject/providers'
 import { InjectedConnector } from '@web3-react/injected-connector'
 import { WalletConnectConnector } from '@web3-react/walletconnect-connector'
@@ -16,7 +16,7 @@ if (typeof NETWORK_URL === 'undefined') {
 
 export const network = new NetworkConnector({
   urls: { [NETWORK_CHAIN_ID]: NETWORK_URL },
-  defaultChainId: NETWORK_CHAIN_ID
+  defaultChainId: NETWORK_CHAIN_ID,
 })
 
 let networkLibrary: Web3Provider | undefined

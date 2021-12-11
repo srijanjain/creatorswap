@@ -1,6 +1,6 @@
 import React from 'react'
 import { Trade, TradeType } from '@pancakeswap-libs/sdk'
-import { Card, CardBody, Text } from '@pancakeswap-libs/uikit'
+import { Card, CardBody, Text } from '@canvaswap-libs/uikit'
 import useI18n from 'hooks/useI18n'
 import { Field } from '../../state/swap/actions'
 import { useUserSlippageTolerance } from '../../state/user/hooks'
@@ -12,7 +12,7 @@ import FormattedPriceImpact from './FormattedPriceImpact'
 import { SectionBreak } from './styleds'
 import SwapRoute from './SwapRoute'
 
-export function TradeSummary({ trade, allowedSlippage }: { trade: Trade | undefined, allowedSlippage: number }) {
+export function TradeSummary({ trade, allowedSlippage }: { trade: Trade | undefined; allowedSlippage: number }) {
   const { priceImpactWithoutFee, realizedLPFee } = computeTradePriceBreakdown(trade)
   const isExactIn = trade?.tradeType === TradeType.EXACT_INPUT
   const slippageAdjustedAmounts = computeSlippageAdjustedAmounts(trade, allowedSlippage)
@@ -45,7 +45,7 @@ export function TradeSummary({ trade, allowedSlippage }: { trade: Trade | undefi
         </RowBetween>
         <RowBetween>
           <RowFixed>
-            <Text fontSize='14px'>{TranslateString(226, 'Price Impact')}</Text>
+            <Text fontSize="14px">{TranslateString(226, 'Price Impact')}</Text>
             <QuestionHelper
               text={TranslateString(
                 224,

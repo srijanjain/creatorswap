@@ -1,12 +1,12 @@
 import React, { useState } from 'react'
 import { ThemeProvider as SCThemeProvider } from 'styled-components'
-import { light, dark } from '@pancakeswap-libs/uikit'
+import { light, dark } from '@canvaswap-libs/uikit'
 
 const CACHE_KEY = 'IS_DARK'
 
 export interface ThemeContextType {
-  isDark: boolean;
-  toggleTheme: () => void;
+  isDark: boolean
+  toggleTheme: () => void
 }
 
 const ThemeContext = React.createContext<ThemeContextType>({ isDark: false, toggleTheme: () => null })
