@@ -13,10 +13,14 @@ export default function index() {
               <div className="face face1">
                 <div className="content">
                   <div className="icon">
+                    <a href="/" className="view_token" target="_blank" rel="noreferrer">
+                      View Token <span className="fa fa-external-link" />
+                    </a>
                     <img src={card.icon} alt="profile" className="rounded-circle" />
                     <p className=" w-100 text-center">
                       <span className="fa fa-dollar" /> {card.token}
                     </p>
+                    <p className="price">{card.price}</p>
                   </div>
                 </div>
               </div>
@@ -24,35 +28,29 @@ export default function index() {
                 <div className="content ">
                   <ul>
                     <li>
-                      <a href={card.instagram}>
+                      <a href={card.instagram} target="_blank" rel="noreferrer">
                         <i className="fa fa-facebook" aria-hidden="true" />
                       </a>
                     </li>
                     <li>
-                      <a href={card.instagram}>
+                      <a href={card.instagram} target="_blank" rel="noreferrer">
                         <i className="fa fa-twitter" aria-hidden="true" />
                       </a>
                     </li>
 
                     <li>
-                      <a href={card.instagram}>
+                      <a href={card.instagram} target="_blank" rel="noreferrer">
                         <i className="fa fa-linkedin" aria-hidden="true" />
                       </a>
                     </li>
                     <li>
-                      <a href={card.instagram}>
+                      <a href={card.instagram} target="_blank" rel="noreferrer">
                         <i className="fa fa-instagram" aria-hidden="true" />
                       </a>
                     </li>
                   </ul>
-                  <div className="projectFactsWrap d-flex flex-row">
-                    <div className="item">
-                      <p id="number1" className="number">
-                        {card.price}
-                      </p>
-
-                      <p>Price</p>
-                    </div>
+                  <hr />
+                  <div className="projectFactsWrap d-flex flex-row justify-content-around">
                     <div className="item">
                       <p id="number2" className="number">
                         {card.totsupply}
@@ -76,7 +74,7 @@ export default function index() {
                     </div>
                   </div>
                 </div>
-                <hr />
+
                 <div className="content">
                   <p>{card.content}</p>
                   <h3>

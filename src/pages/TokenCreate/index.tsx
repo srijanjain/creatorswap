@@ -58,6 +58,12 @@ const TokenCreate = () => {
     await contract.deployTransaction.wait()
   }
 
+  const handleLiq = (e) => {
+    const { name, value } = e.target
+    const change = value - state[name]
+    setState({ ...state, [name]: value, ico: state.ico + change })
+  }
+
   return (
     <AppBody>
       <Wrapper id="swap-page">
@@ -109,14 +115,14 @@ const TokenCreate = () => {
                 </AutoColumn>
                 <AutoColumn gap="md">
                   <Text color="primary"> Pool</Text>
-                  <Input type="number" placeholder=" Pool" onChange={handleInput} name="pool" value={state.pool} />
+                  <Input type="number" placeholder=" Pool" onChange={handleLiq} name="pool" value={state.pool} />
                 </AutoColumn>
                 <AutoColumn gap="md">
                   <Text color="primary"> Holding</Text>
                   <Input
                     type="number"
                     placeholder=" Holding"
-                    onChange={handleInput}
+                    onChange={handleLiq}
                     name="holding"
                     value={state.holding}
                   />

@@ -20,20 +20,38 @@
 
 .card_custom .icon img {
   position: absolute;
-  top: 40%;
+  top: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
   transition: 0.7s;
   color: #fff;
 }
+
 .card_custom .icon p {
   position: absolute;
-  top: 70%;
+  top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 40px;
   transition: 0.7s;
   color: #fff;
+}
+
+.card_custom .icon .price {
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 30px;
+  transition: 0.7s;
+  color: #fff;
+}
+
+.card_custom .face .view_token {
+  color: #fff;
+  position: absolute;
+  top: 2%;
+  left: 65%;
 }
 
 .card_custom .face {
