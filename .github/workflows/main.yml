@@ -22,7 +22,8 @@ jobs:
       - name: publish package
         run: |
           yarn
-          ./sedcommands-polygon.sh
+          ls
+          ./canvaswap/sedcommands-polygon.sh
           git config user.name "itissandeep98"
           git config user.email "itissandeep98@gmail.com"
           git remote set-url origin https://quadra-network:${{secrets.ACCESS_TOKEN}}@github.com/quadra-network/canvaswap
