@@ -17,12 +17,8 @@ import { EN, allLanguages } from '../constants/localisation/languageCodes'
 import { LanguageContext } from '../hooks/LanguageContext'
 import { TranslationsContext } from '../hooks/TranslationsContext'
 
-<<<<<<< HEAD
 import 'bootstrap/dist/css/bootstrap.css'
 import 'font-awesome/css/font-awesome.css'
-=======
-import 'bootstrap/dist/css/bootstrap.css';
->>>>>>> origin/polygon-canvaswap
 // import'bootstrap/dist/css/bootstrap-theme.css';
 
 import Menu from '../components/Menu'

@@ -12,11 +12,7 @@ import FormattedPriceImpact from './FormattedPriceImpact'
 import { SectionBreak } from './styleds'
 import SwapRoute from './SwapRoute'
 
-<<<<<<< HEAD
 export function TradeSummary({ trade, allowedSlippage }: { trade: Trade | undefined; allowedSlippage: number }) {
-=======
-export function TradeSummary({ trade, allowedSlippage }: { trade: Trade | undefined, allowedSlippage: number }) {
->>>>>>> origin/polygon-canvaswap
   const { priceImpactWithoutFee, realizedLPFee } = computeTradePriceBreakdown(trade)
   const isExactIn = trade?.tradeType === TradeType.EXACT_INPUT
   const slippageAdjustedAmounts = computeSlippageAdjustedAmounts(trade, allowedSlippage)

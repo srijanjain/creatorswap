@@ -6,15 +6,9 @@ import { Button, CardBody, Text } from '@canvaswap-libs/uikit'
 import { Link } from 'react-router-dom'
 // import CardNav from 'components/CardNav'
 import Question from 'components/QuestionHelper'
-<<<<<<< HEAD
 import Row from 'react-bootstrap/Row'
 import FullPositionCard from 'components/PositionCard'
 import ShortPositionCard from 'components/ShortPositionCard'
-=======
-import Row from 'react-bootstrap/Row';
-import FullPositionCard from 'components/PositionCard'
-import ShortPositionCard from 'components/ShortPositionCard';
->>>>>>> origin/polygon-canvaswap
 
 import { useTokenBalancesWithLoadingIndicator } from 'state/wallet/hooks'
 import { StyledInternalLink } from 'components/Shared'
@@ -30,14 +24,8 @@ import useI18n from 'hooks/useI18n'
 import PageHeader from 'components/PageHeader'
 import Card from 'react-bootstrap/Card'
 import AppBody from '../AppBody'
-<<<<<<< HEAD
 import styles from './styles.module.css'
 import Logo from '../../icons/liquidity_grey.svg'
-=======
-import styles from './styles.module.css';
-
-
->>>>>>> origin/polygon-canvaswap
 
 export default function Pool() {
   const theme = useContext(ThemeContext)
@@ -58,10 +46,6 @@ export default function Pool() {
     liquidityTokens
   )
   // const  b = new Pair(0,0);
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/polygon-canvaswap
 
   // fetch the reserves for all V2 pools in which the user has a balance
   const liquidityTokensWithBalances = useMemo(
@@ -84,31 +68,18 @@ export default function Pool() {
     <>
       {/* <CardNav activeIndex={1} /> */}
       <Card className={styles.card}>
-<<<<<<< HEAD
         <img className={`${styles.card_img_top} img-circle rounded-circle`} src={Logo} />
-=======
-        <img className={`${styles.card_img_top  } img-circle rounded-circle`} src="https://dummyimage.com/100x100/000/fff" />
->>>>>>> origin/polygon-canvaswap
         <br />
         <br />
 
         <PageHeader
           title={TranslateString(262, 'Liquidity')}
           description={TranslateString(1168, 'Add liquidity to receive LP tokens')}
-<<<<<<< HEAD
         />
         <AutoColumn gap="lg" justify="center">
           <div />
 
           <Row className={styles.partb}>
-=======
-         />
-        <AutoColumn gap="lg" justify="center" >
-        <div/>
-
-        
-          <Row className={styles.partb} >
->>>>>>> origin/polygon-canvaswap
             <div className={styles.partlb}>
               <AutoColumn gap="12px" style={{ width: '100%' }}>
                 <RowBetween>
@@ -121,10 +92,6 @@ export default function Pool() {
                   />
                 </RowBetween>
 
-<<<<<<< HEAD
-=======
-              
->>>>>>> origin/polygon-canvaswap
                 {!account ? (
                   <LightCard padding="40px">
                     <Text color="textDisabled" textAlign="center">
@@ -143,19 +110,12 @@ export default function Pool() {
                       // <FullPositionCard key={v2Pair.liquidityToken.address} pair={v2Pair} />
 
                       // eslint-disable-next-line jsx-a11y/no-static-element-interactions
-<<<<<<< HEAD
                       <div
                         onClick={() => setpairindex(allV2PairsWithLiquidity.indexOf(v2Pair))}
                         onKeyDown={() => setpairindex(allV2PairsWithLiquidity.indexOf(v2Pair))}
                       >
                         <ShortPositionCard key={v2Pair.liquidityToken.address} pair={v2Pair} />
                       </div>
-=======
-                      <div onClick={() => setpairindex(allV2PairsWithLiquidity.indexOf(v2Pair))} onKeyDown={() => setpairindex(allV2PairsWithLiquidity.indexOf(v2Pair))} >
-                        <ShortPositionCard key={v2Pair.liquidityToken.address} pair={v2Pair} />
-                      </div>
-
->>>>>>> origin/polygon-canvaswap
                     ))}
                   </>
                 ) : (
@@ -169,7 +129,6 @@ export default function Pool() {
             </div>
 
             <div className={styles.partrb}>
-<<<<<<< HEAD
               {Boolean(allV2PairsWithLiquidity[pairindex]) && (
                 <FullPositionCard key={1} pair={allV2PairsWithLiquidity[pairindex]} />
               )}
@@ -177,15 +136,6 @@ export default function Pool() {
           </Row>
 
           <Button id="join-pool-button" as={Link} to="/add/BNB">
-=======
-                  { Boolean(allV2PairsWithLiquidity[pairindex])  &&
-                    <FullPositionCard key={1} pair={allV2PairsWithLiquidity[pairindex]} />
-                  }
-            </div>
-          </Row>
-          
-          <Button id="join-pool-button" as={Link} to="/add/BNB" >
->>>>>>> origin/polygon-canvaswap
             {TranslateString(168, 'Add Liquidity')}
           </Button>
 
@@ -200,17 +150,8 @@ export default function Pool() {
               {TranslateString(1172, 'Or, if you staked your LP tokens in a farm, unstake them to see them here.')}
             </Text>
           </div>
-<<<<<<< HEAD
         </AutoColumn>
       </Card>
-=======
-
-        </AutoColumn>
-        
-      </Card>
-      <h1>yeh hai liquidity 2</h1>
-
->>>>>>> origin/polygon-canvaswap
     </>
   )
 }

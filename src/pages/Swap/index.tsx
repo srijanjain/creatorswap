@@ -4,11 +4,7 @@
 import { CurrencyAmount, JSBI, Token, Trade } from '@pancakeswap-libs/sdk'
 import React, { useCallback, useContext, useEffect, useMemo, useState } from 'react'
 import { ArrowDown } from 'react-feather'
-<<<<<<< HEAD
 import { SyncAltIcon, Button, IconButton, Text } from '@canvaswap-libs/uikit'
-=======
-import { CardBody, ArrowDownIcon, SyncAltIcon, Button, IconButton, Text } from '@pancakeswap-libs/uikit'
->>>>>>> origin/polygon-canvaswap
 import { ThemeContext } from 'styled-components'
 import AddressInputPanel from 'components/AddressInputPanel'
 
@@ -16,16 +12,9 @@ import PCard, { GreyCard } from 'components/Card'
 import { AutoColumn } from 'components/Column'
 import ConfirmSwapModal from 'components/swap/ConfirmSwapModal'
 import CurrencyInputPanel from 'components/CurrencyInputPanel'
-<<<<<<< HEAD
 import { AutoRow, RowBetween } from 'components/Row'
 import AdvancedSwapDetailsDropdown from 'components/swap/AdvancedSwapDetailsDropdown'
 import { TradeSummary } from 'components/swap/AdvancedSwapDetails'
-=======
-// import CardNav from 'components/CardNav'
-import { AutoRow, RowBetween } from 'components/Row'
-import AdvancedSwapDetailsDropdown from 'components/swap/AdvancedSwapDetailsDropdown'
-import  { TradeSummary  } from 'components/swap/AdvancedSwapDetails';
->>>>>>> origin/polygon-canvaswap
 
 import confirmPriceImpactWithoutFee from 'components/swap/confirmPriceImpactWithoutFee'
 import { ArrowWrapper, BottomGrouping, SwapCallbackError, Wrapper } from 'components/swap/styleds'
@@ -34,11 +23,7 @@ import TokenWarningModal from 'components/TokenWarningModal'
 import SyrupWarningModal from 'components/SyrupWarningModal'
 import SafeMoonWarningModal from 'components/SafeMoonWarningModal'
 import ProgressSteps from 'components/ProgressSteps'
-<<<<<<< HEAD
 import Row from 'react-bootstrap/Row'
-=======
-import Row from 'react-bootstrap/Row';
->>>>>>> origin/polygon-canvaswap
 import { INITIAL_ALLOWED_SLIPPAGE } from 'constants/index'
 import { useActiveWeb3React } from 'hooks'
 import { useCurrency } from 'hooks/Tokens'
@@ -56,14 +41,9 @@ import useI18n from 'hooks/useI18n'
 import PageHeader from 'components/PageHeader'
 import ConnectWalletButton from 'components/ConnectWalletButton'
 import Card from 'react-bootstrap/Card'
-<<<<<<< HEAD
 import styles from './styles.module.css'
 
 import Logo from '../../icons/swap_grey.svg'
-=======
-import AppBody from '../AppBody';
-import styles from './styles.module.css';
->>>>>>> origin/polygon-canvaswap
 
 const Swap = () => {
   const loadedUrlParams = useDefaultsFromURLSearch()
@@ -229,11 +209,7 @@ const Swap = () => {
   const [showInverted, setShowInverted] = useState<boolean>(false)
 
   // warnings on slippage
-<<<<<<< HEAD
 
-=======
-  
->>>>>>> origin/polygon-canvaswap
   const priceImpactSeverity = warningSeverity(priceImpactWithoutFee)
 
   // show approve flow when: no error on inputs, not approved or pending, or approved in current session
@@ -321,11 +297,7 @@ const Swap = () => {
       <SafeMoonWarningModal isOpen={transactionWarning.selectedToken === 'SAFEMOON'} onConfirm={handleConfirmWarning} />
       {/* <CardNav /> */}
       <Card className={styles.card}>
-<<<<<<< HEAD
         <img className={`${styles.card_img_top} img-circle rounded-circle`} src={Logo} />
-=======
-        <img className={`${styles.card_img_top  } img-circle rounded-circle`} src="https://dummyimage.com/100x100/000/fff" />
->>>>>>> origin/polygon-canvaswap
         <Wrapper id="swap-page">
           <ConfirmSwapModal
             isOpen={showConfirm}
@@ -344,11 +316,7 @@ const Swap = () => {
             title={TranslateString(8, 'Swap')}
             description={TranslateString(1192, 'Trade tokens in an instant')}
           />
-<<<<<<< HEAD
           <PCard>
-=======
-          <PCard >
->>>>>>> origin/polygon-canvaswap
             <AutoColumn gap="md">
               <Row>
                 <div className={styles.partl}>
@@ -367,7 +335,6 @@ const Swap = () => {
                     otherCurrency={currencies[Field.OUTPUT]}
                     id="swap-currency-input"
                   />
-<<<<<<< HEAD
                 </div>
                 <div className={styles.partm}>
                   <div className={styles.synccontainer}>
@@ -384,27 +351,6 @@ const Swap = () => {
                         <SyncAltIcon color="primary" width="24px" />
                       </IconButton>
                     </ArrowWrapper>
-=======
-              </div>
-              <div className={styles.partm}>
-              <div className={styles.synccontainer}>
-
-                  <ArrowWrapper clickable>
-                    <IconButton
-                      variant="tertiary"
-                      onClick={() => {
-                        setApprovalSubmitted(false) // reset 2 step UI for approvals
-                        onSwitchTokens()
-                      }}
-                      style={{ borderRadius: '50%' }}
-                      scale="sm"
-                    >
-                      
-                      <SyncAltIcon color="primary" width="24px" />
-                    </IconButton>
-
-                  </ArrowWrapper>
->>>>>>> origin/polygon-canvaswap
                   </div>
 
                   {recipient === null && !showWrap && isExpertMode ? (
@@ -412,7 +358,6 @@ const Swap = () => {
                       + Add a send (optional)
                     </LinkStyledButton>
                   ) : null}
-<<<<<<< HEAD
                 </div>
                 <div className={styles.partr}>
                   <CurrencyInputPanel
@@ -437,32 +382,6 @@ const Swap = () => {
 
                   {showWrap ? null : (
                     <AutoColumn>
-=======
-              </div>
-              <div className={styles.partr}>
-                <CurrencyInputPanel
-                  value={formattedAmounts[Field.OUTPUT]}
-                  onUserInput={handleTypeOutput}
-                  label={
-                    independentField === Field.INPUT && !showWrap && trade
-                      ? TranslateString(196, 'To (estimated)')
-                      : TranslateString(80, 'To')
-                  }
-                  showMaxButton={false}
-                  currency={currencies[Field.OUTPUT]}
-                  onCurrencySelect={handleOutputSelect}
-                  otherCurrency={currencies[Field.INPUT]}
-                  id="swap-currency-output"
-                />
-              </div>
-              </Row>
-              <Row className={styles.partb}>
-                  <div className={styles.partb1}>
-                    <AdvancedSwapDetailsDropdown trade={trade} />
-                    
-                    {showWrap ? null : (
-                    <AutoColumn >
->>>>>>> origin/polygon-canvaswap
                       {Boolean(trade) && (
                         <RowBetween align="center">
                           <Text fontSize="14px">{TranslateString(1182, 'Price')}</Text>
@@ -480,19 +399,11 @@ const Swap = () => {
                         </RowBetween>
                       )}
                     </AutoColumn>
-<<<<<<< HEAD
                   )}
                 </div>
                 <div className={styles.partb2}>
                   <TradeSummary trade={trade} allowedSlippage={allowedSlippage} />
                 </div>
-=======
-                    )}
-                  </div>
-                  <div className={styles.partb2}>
-                    <TradeSummary trade={trade} allowedSlippage={allowedSlippage} />
-                  </div>
->>>>>>> origin/polygon-canvaswap
               </Row>
 
               {recipient !== null && !showWrap ? (
@@ -511,7 +422,6 @@ const Swap = () => {
             </AutoColumn>
 
             <div className={styles.button}>
-<<<<<<< HEAD
               <BottomGrouping>
                 {!account ? (
                   <ConnectWalletButton width="100%" />
@@ -519,38 +429,6 @@ const Swap = () => {
                   <Button disabled={Boolean(wrapInputError)} onClick={onWrap} width="100%">
                     {wrapInputError ??
                       (wrapType === WrapType.WRAP ? 'Wrap' : wrapType === WrapType.UNWRAP ? 'Unwrap' : null)}
-=======
-            
-            <BottomGrouping>
-              {!account ? (
-                <ConnectWalletButton width="100%" />
-              ) : showWrap ? (
-                <Button disabled={Boolean(wrapInputError)} onClick={onWrap} width="100%">
-                  {wrapInputError ??
-                    (wrapType === WrapType.WRAP ? 'Wrap' : wrapType === WrapType.UNWRAP ? 'Unwrap' : null)}
-                </Button>
-              ) : noRoute && userHasSpecifiedInputOutput ? (
-                <GreyCard style={{ textAlign: 'center' }}>
-                  <Text mb="4px">{TranslateString(1194, 'Insufficient liquidity for this trade.')}</Text>
-                </GreyCard>
-              ) : showApproveFlow ? (
-                <RowBetween>
-                  <Button
-                    onClick={approveCallback}
-                    disabled={approval !== ApprovalState.NOT_APPROVED || approvalSubmitted}
-                    style={{ width: '48%' }}
-                    variant={approval === ApprovalState.APPROVED ? 'success' : 'primary'}
-                  >
-                    {approval === ApprovalState.PENDING ? (
-                      <AutoRow gap="6px" justify="center">
-                        Approving <Loader stroke="white" />
-                      </AutoRow>
-                    ) : approvalSubmitted && approval === ApprovalState.APPROVED ? (
-                      'Approved'
-                    ) : (
-                      `Approve ${currencies[Field.INPUT]?.symbol}`
-                    )}
->>>>>>> origin/polygon-canvaswap
                   </Button>
                 ) : noRoute && userHasSpecifiedInputOutput ? (
                   <GreyCard style={{ textAlign: 'center' }}>
@@ -625,7 +503,6 @@ const Swap = () => {
                         ? `Price Impact Too High`
                         : `Swap${priceImpactSeverity > 2 ? ' Anyway' : ''}`)}
                   </Button>
-<<<<<<< HEAD
                 )}
                 {showApproveFlow && <ProgressSteps steps={[approval === ApprovalState.APPROVED]} />}
                 {isExpertMode && swapErrorMessage ? <SwapCallbackError error={swapErrorMessage} /> : null}
@@ -633,43 +510,6 @@ const Swap = () => {
             </div>
           </PCard>
         </Wrapper>
-=======
-                </RowBetween>
-              ) : (
-                <Button
-                  onClick={() => {
-                    if (isExpertMode) {
-                      handleSwap()
-                    } else {
-                      setSwapState({
-                        tradeToConfirm: trade,
-                        attemptingTxn: false,
-                        swapErrorMessage: undefined,
-                        showConfirm: true,
-                        txHash: undefined,
-                      })
-                    }
-                  }}
-                  id="swap-button"
-                  disabled={!isValid || (priceImpactSeverity > 3 && !isExpertMode) || !!swapCallbackError}
-                  variant={isValid && priceImpactSeverity > 2 && !swapCallbackError ? 'danger' : 'primary'}
-                  width="100%"
-                >
-                  {swapInputError ||
-                    (priceImpactSeverity > 3 && !isExpertMode
-                      ? `Price Impact Too High`
-                      : `Swap${priceImpactSeverity > 2 ? ' Anyway' : ''}`)}
-                </Button>
-              )}
-              {showApproveFlow && <ProgressSteps steps={[approval === ApprovalState.APPROVED]} />}
-              {isExpertMode && swapErrorMessage ? <SwapCallbackError error={swapErrorMessage} /> : null}
-            </BottomGrouping>
-          </div>
-
-          </PCard>
-        </Wrapper>
-
->>>>>>> origin/polygon-canvaswap
       </Card>
     </>
   )

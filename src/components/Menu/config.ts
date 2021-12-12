@@ -8,7 +8,6 @@ const config: MenuEntry[] = [
   },
   {
     label: 'Exchange',
-<<<<<<< HEAD
     icon: 'SwapIcon',
     href: '/swap',
   },
@@ -16,10 +15,6 @@ const config: MenuEntry[] = [
     label: 'Liquidity',
     icon: 'LiquidityIcon',
     href: '/pool',
-=======
-    icon: 'TradeIcon',
-    href: '/swap',
->>>>>>> origin/polygon-canvaswap
   },
   {
     label: 'Liquidity',

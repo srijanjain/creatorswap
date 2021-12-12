@@ -1,10 +1,6 @@
 import { Currency, ETHER, JSBI, TokenAmount } from '@pancakeswap-libs/sdk'
 import React, { useCallback, useEffect, useState } from 'react'
-<<<<<<< HEAD
 import { Button, ChevronDownIcon, AddIcon, CardBody, Text } from '@canvaswap-libs/uikit'
-=======
-import { Button, ChevronDownIcon, AddIcon, CardBody, Text } from '@pancakeswap-libs/uikit'
->>>>>>> origin/polygon-canvaswap
 // import CardNav from 'components/CardNav'
 import { LightCard } from 'components/Card'
 import { AutoColumn, ColumnCenter } from 'components/Column'
@@ -86,11 +82,6 @@ export default function PoolFinder() {
   return (
     <>
       {/* <CardNav activeIndex={1} /> */}
-<<<<<<< HEAD
-=======
-      <h1>yeh hai liquidity 3</h1>
-
->>>>>>> origin/polygon-canvaswap
       <AppBody>
         <FindPoolTabs />
         <CardBody>
