@@ -63,12 +63,15 @@ export default function Pool() {
     fetchingV2PairBalances || v2Pairs?.length < liquidityTokensWithBalances.length || v2Pairs?.some((V2Pair) => !V2Pair)
 
   const allV2PairsWithLiquidity = v2Pairs.map(([, pair]) => pair).filter((v2Pair): v2Pair is Pair => Boolean(v2Pair))
-  
+
   return (
     <>
       {/* <CardNav activeIndex={1} /> */}
       <Card className={styles.card}>
-        <img className={`${styles.card_img_top} img-circle rounded-circle`} src={Logo} />
+        <img
+          className={`${styles.card_img_top} img-circle rounded-circle`}
+          src={`${process.env.PUBLIC_URL}/icons/liquidity_grey.svg`}
+        />
         <br />
         <br />
 

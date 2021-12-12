@@ -9,7 +9,6 @@ import QuestionHelper from 'components/QuestionHelper'
 import byteCode from 'constants/abis/byteCode'
 import STANDARD_TOKEN from '../../constants/abis/standard_token.json'
 import './style.css'
-import Logo from '../../icons/swap_grey.svg'
 import Coin from '../../icons/coin.png'
 import ConfirmModal from './ConfirmModal'
 
@@ -74,7 +73,11 @@ const TokenCreate = () => {
       <ConfirmModal isOpen={modal} onDismiss={toggleModal} contract={state.contract} />
 
       <Card className="card bg-purple">
-        <img className="card_img_top img-circle rounded-circle" src={Logo} alt="logo" />
+        <img
+          className="card_img_top img-circle rounded-circle"
+          src={`${process.env.PUBLIC_URL}/icons/swap_grey.svg`}
+          alt="logo"
+        />
         <Container>
           <Row>
             <CustomPageHeader
@@ -87,34 +90,33 @@ const TokenCreate = () => {
             <Col xs={4}>
               <Row className="h-100">
                 <Col className="align-items-center text-center d-flex" xs={4}>
-                  <img src={Coin} alt="coin" className="coin_icon" />
+                  <img src={`${process.env.PUBLIC_URL}/icons/coin.png`} alt="coin" className="coin_icon" />
                 </Col>
                 <Col className="align-items-center  d-flex">
                   <Table bordered responsive hover>
                     <tbody>
-                      <tr className='text-purple'>
+                      <tr className="text-purple">
                         <td>Provide Liquidity</td>
                         <td>
                           {state.pool} %
                           <QuestionHelper text="Percentage of Token you want to provide for liquidity pool. This is done so more people can buy token and earn rewards" />
                         </td>
                       </tr>
-                      <tr className='text-purple'>
+                      <tr className="text-purple">
                         <td>Initial Coin Offering</td>
                         <td>
                           {state.ico} %
                           <QuestionHelper text="Percentage of Tokens you want to provide for Buying." />
                         </td>
                       </tr>
-                      <tr className='text-purple'>
+                      <tr className="text-purple">
                         <td>Holding</td>
                         <td>
                           {state.holding} %
                           <QuestionHelper text="Percentage of Tokens you'll keep for yourself for future liquidity." />
                         </td>
                       </tr>
-                      <tr className='text-purple'>
-                
+                      <tr className="text-purple">
                         <td>Air Drop</td>
                         <td>
                           {state.airdrop} %

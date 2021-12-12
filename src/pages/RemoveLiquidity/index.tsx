@@ -446,7 +446,10 @@ export default function RemoveLiquidity({
       <br />
       <br />
       <Card className={styles.card}>
-        <img className={`${styles.card_img_top} img-circle rounded-circle`} src={Logo} />
+        <img
+          className={`${styles.card_img_top} img-circle rounded-circle`}
+          src={`${process.env.PUBLIC_URL}/icons/liquidity_grey.svg`}
+        />
         <br />
         <br />
         <br />
@@ -542,9 +545,9 @@ export default function RemoveLiquidity({
                         </StyledInternalLink>
                       ) : oneCurrencyIsWETH ? (
                         <StyledInternalLink
-                          to={`/remove/${currencyA && currencyEquals(currencyA, WETH[chainId]) ? 'MATIC' : currencyIdA}/${
-                            currencyB && currencyEquals(currencyB, WETH[chainId]) ? 'MATIC' : currencyIdB
-                          }`}
+                          to={`/remove/${
+                            currencyA && currencyEquals(currencyA, WETH[chainId]) ? 'MATIC' : currencyIdA
+                          }/${currencyB && currencyEquals(currencyB, WETH[chainId]) ? 'MATIC' : currencyIdB}`}
                         >
                           {TranslateString(1190, 'Receive MATIC')}
                         </StyledInternalLink>

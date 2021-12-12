@@ -38,7 +38,6 @@ import { PoolPriceBar } from './PoolPriceBar'
 import { ROUTER_ADDRESS } from '../../constants'
 import styles from './styles.module.css'
 // import Logo from "../../../public/images/icons/liquidity_grey.svg";
-import Logo from '../../icons/liquidity_grey.svg'
 
 export default function AddLiquidity({
   match: {
@@ -295,7 +294,10 @@ export default function AddLiquidity({
     <>
       {/* <CardNav activeIndex={1} /> */}
       <Card className={styles.card}>
-        <img className={`${styles.card_img_top} img-circle rounded-circle`} src={Logo} />
+        <img
+          className={`${styles.card_img_top} img-circle rounded-circle`}
+          src={`${process.env.PUBLIC_URL}/icons/liquidity_grey.svg`}
+        />
         <br />
         <br />
         <br />
