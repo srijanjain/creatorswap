@@ -16,10 +16,10 @@ jobs:
       - name: checkout repo content
         uses: actions/checkout@v2 # checkout the repository content to github runner
         with:
-         repository: quadra-network/canvaswap-libs
-         token: ${{secrets.ACCESS_TOKEN}}
-         path: canvaswap-libs
-       
+          repository: quadra-network/canvaswap-libs
+          token: ${{secrets.ACCESS_TOKEN}}
+          path: canvaswap-libs
+
       - uses: actions/setup-node@v1
         with:
           node-version: 16
@@ -27,6 +27,7 @@ jobs:
       - name: publish package
         run: |
           cd main
+          sudo chown -R $USER:$USER ${{ github.workspace }}
           yarn
           ./sedcommands-polygon.sh
           git config user.name "itissandeep98"
