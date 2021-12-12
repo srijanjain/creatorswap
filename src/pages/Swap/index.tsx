@@ -43,8 +43,6 @@ import ConnectWalletButton from 'components/ConnectWalletButton'
 import Card from 'react-bootstrap/Card'
 import styles from './styles.module.css'
 
-import Logo from '../../icons/swap_grey.svg'
-
 const Swap = () => {
   const loadedUrlParams = useDefaultsFromURLSearch()
   const TranslateString = useI18n()

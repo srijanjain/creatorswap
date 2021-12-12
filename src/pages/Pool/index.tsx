@@ -23,9 +23,7 @@ import { Dots } from 'components/swap/styleds'
 import useI18n from 'hooks/useI18n'
 import PageHeader from 'components/PageHeader'
 import Card from 'react-bootstrap/Card'
-import AppBody from '../AppBody'
 import styles from './styles.module.css'
-import Logo from '../../icons/liquidity_grey.svg'
 
 export default function Pool() {
   const theme = useContext(ThemeContext)

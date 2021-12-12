@@ -46,8 +46,6 @@ import { useUserDeadline, useUserSlippageTolerance } from '../../state/user/hook
 
 import styles from './styles.module.css'
 
-import Logo from '../../icons/liquidity_grey.svg'
-
 export default function RemoveLiquidity({
   history,
   match: {

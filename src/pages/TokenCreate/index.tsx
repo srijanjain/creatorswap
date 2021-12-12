@@ -9,7 +9,6 @@ import QuestionHelper from 'components/QuestionHelper'
 import byteCode from 'constants/abis/byteCode'
 import STANDARD_TOKEN from '../../constants/abis/standard_token.json'
 import './style.css'
-import Coin from '../../icons/coin.png'
 import ConfirmModal from './ConfirmModal'
 
 const totalSupply = 500000

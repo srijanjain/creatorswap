@@ -31,13 +31,11 @@ import Pane from 'components/Pane'
 import ConnectWalletButton from 'components/ConnectWalletButton'
 import useI18n from 'hooks/useI18n'
 import Card from 'react-bootstrap/Card'
-import AppBody from '../AppBody'
 import { Dots, Wrapper } from '../Pool/styleds'
 import { ConfirmAddModalBottom } from './ConfirmAddModalBottom'
 import { PoolPriceBar } from './PoolPriceBar'
 import { ROUTER_ADDRESS } from '../../constants'
 import styles from './styles.module.css'
-// import Logo from "../../../public/images/icons/liquidity_grey.svg";
 
 export default function AddLiquidity({
   match: {
