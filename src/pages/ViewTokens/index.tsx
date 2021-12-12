@@ -5,7 +5,7 @@ import './style.css'
 
 export default function index() {
   return (
-    <Container>
+    <Container className="bg-purple">
       <Row>
         {CARDS.map((card) => (
           <Col md={6} lg={4}>

@@ -8,17 +8,17 @@ const config: MenuEntry[] = [
   },
   {
     label: 'Exchange',
-    icon: 'TradeIcon',
+    icon: 'SwapIcon',
     href: '/swap',
   },
   {
     label: 'Liquidity',
-    icon: 'TradeIcon',
+    icon: 'LiquidityIcon',
     href: '/pool',
   },
   {
     label: 'Create Token',
-    icon: 'HomeIcon',
+    icon: 'CanvasIcon',
     href: '/create',
   },
 ]
