@@ -9,12 +9,17 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          path: main
       - name: checkout repo content
         uses: actions/checkout@v2 # checkout the repository content to github runner
         with:
          repository: quadra-network/canvaswap-libs
          token: ${{secrets.ACCESS_TOKEN}}
+         path: canvaswap-libs
+       
       - uses: actions/setup-node@v1
         with:
           node-version: 16
