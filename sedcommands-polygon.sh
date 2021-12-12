@@ -15,3 +15,5 @@ sed -i 's/0xaE8E19eFB41e7b96815649A6a60785e1fbA84C1e/0xBBdd6633Db277810e9066abA0
 sed -i 's/0x5Fe5cC0122403f06abE2A75DBba1860Edb762985/0xC538c0661C661571032798F40c1859a9255924D9/g' src/state/swap/hooks.ts
 sed -i 's/0x3E2b14680108E8C5C45C3ab5Bc04E01397af14cB/0x4B556A2A032511718b1C569a1a53dDbCB3B703af/g' src/state/swap/hooks.ts
 sed -i 's/0x5CF874C2f969a53b75d18e9e719c65120000dD5E/0xe1662823d8044254409eB682fE34d35792677228/g' src/state/swap/hooks.ts
+sudo rm -r node_modules/@pancakeswap-libs/sdk/
+cp -r ../canvaswap-libs/sdk/ node_modules/@pancakeswap-libs/
