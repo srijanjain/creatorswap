@@ -1148,6 +1148,19 @@
     "@web3-react/types" "^6.0.7"
     tiny-warning "^1.0.3"
 
+"@canvaswap-libs/uikit@^0.1.1":
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/@canvaswap-libs/uikit/-/uikit-0.1.1.tgz#1791ca4218957987d4343321abb891b8b4916bcd"
+  integrity sha512-Fwd23Buie6CG6zelaZH2wF/U9h/fpPJXDYnrCW3CwlqndkHUl2f42ETHEw9Bv39288zy5RXFwWDfjC9aEAkmNQ==
+  dependencies:
+    "@popperjs/core" "^2.9.2"
+    "@types/lodash" "^4.14.168"
+    "@types/styled-system" "^5.1.10"
+    lodash "^4.17.20"
+    react-popper "^2.2.5"
+    react-transition-group "^4.4.1"
+    styled-system "^5.1.5"
+
 "@cnakazawa/watch@^1.0.3":
   version "1.0.4"
   resolved "https://registry.npmjs.org/@cnakazawa/watch/-/watch-1.0.4.tgz"
@@ -2129,17 +2142,6 @@
     tiny-warning "^1.0.3"
     toformat "^2.0.0"
 
-"@pancakeswap-libs/uikit@^0.23.0":
-  version "0.23.0"
-  resolved "https://registry.npmjs.org/@pancakeswap-libs/uikit/-/uikit-0.23.0.tgz"
-  integrity sha512-3R6KuXcS5NJ4BNT1zL17T1oUimyky8CpvTVo/fsSrYYudgq+ra5E5T7srvt+uQTOI0ZFiGn9WORmD/ecT6ZKjg==
-  dependencies:
-    "@types/lodash" "^4.14.168"
-    "@types/styled-system" "^5.1.10"
-    lodash "^4.17.20"
-    react-transition-group "^4.4.1"
-    styled-system "^5.1.5"
-
 "@pedrouid/iso-crypto@^1.0.0":
   version "1.0.0"
   resolved "https://registry.npmjs.org/@pedrouid/iso-crypto/-/iso-crypto-1.0.0.tgz"
@@ -2162,7 +2164,7 @@
     schema-utils "^2.6.5"
     source-map "^0.7.3"
 
-"@popperjs/core@^2.10.1":
+"@popperjs/core@^2.10.1", "@popperjs/core@^2.9.2":
   version "2.11.0"
   resolved "https://registry.yarnpkg.com/@popperjs/core/-/core-2.11.0.tgz#6734f8ebc106a0860dff7f92bf90df193f0935d7"
   integrity sha512-zrsUxjLOKAzdewIDRWy9nsV1GQsKBCWaGwsZQlCgr6/q+vjyZhFgqedLfFBuI9anTPEUT4APq9Mu0SZBTzIcGQ==
@@ -7561,6 +7563,11 @@ follow-redirects@^1.0.0, follow-redirects@^1.10.0:
   resolved "https://registry.npmjs.org/follow-redirects/-/follow-redirects-1.13.1.tgz"
   integrity sha512-SSG5xmZh1mkPGyKzjZP8zLjltIfpW32Y5QpdNJyjcfGxK3qo3NDDkZOZSFiGn1A6SclQxY9GzEwAHQ3dmYRWpg==
 
+font-awesome@^4.7.0:
+  version "4.7.0"
+  resolved "https://registry.yarnpkg.com/font-awesome/-/font-awesome-4.7.0.tgz#8fa8cf0411a1a31afd07b06d2902bb9fc815a133"
+  integrity sha1-j6jPBBGhoxr9B7BtKQK7n8gVoTM=
+
 for-in@^1.0.2:
   version "1.0.2"
   resolved "https://registry.npmjs.org/for-in/-/for-in-1.0.2.tgz"
@@ -12580,6 +12587,14 @@ react-popper@^2.2.3:
   version "2.2.4"
   resolved "https://registry.npmjs.org/react-popper/-/react-popper-2.2.4.tgz"
   integrity sha512-NacOu4zWupdQjVXq02XpTD3yFPSfg5a7fex0wa3uGKVkFK7UN6LvVxgcb+xYr56UCuWiNPMH20tntdVdJRwYew==
+  dependencies:
+    react-fast-compare "^3.0.1"
+    warning "^4.0.2"
+
+react-popper@^2.2.5:
+  version "2.2.5"
+  resolved "https://registry.yarnpkg.com/react-popper/-/react-popper-2.2.5.tgz#1214ef3cec86330a171671a4fbcbeeb65ee58e96"
+  integrity sha512-kxGkS80eQGtLl18+uig1UIf9MKixFSyPxglsgLBxlYnyDf65BiY9B3nZSc6C9XUNDgStROB0fMQlTEz1KxGddw==
   dependencies:
     react-fast-compare "^3.0.1"
     warning "^4.0.2"
