@@ -42,7 +42,11 @@ const BodyWrapper = styled.div`
   overflow-x: hidden;
   z-index: 1;
   justify-content: center;
+<<<<<<< HEAD
   background-color: #14163b;
+=======
+  background-color: #42C0FB;
+>>>>>>> origin/polygon-canvaswap
   background-repeat: no-repeat;
   background-position: bottom 24px center;
   background-size: 90%;

@@ -17,6 +17,11 @@ const config: MenuEntry[] = [
     href: '/pool',
   },
   {
+    label: 'Liquidity',
+    icon: 'TradeIcon',
+    href: '/pool',
+  },  
+  {
     label: 'Create Token',
     icon: 'CanvasIcon',
     href: '/create',
