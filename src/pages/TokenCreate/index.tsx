@@ -92,28 +92,29 @@ const TokenCreate = () => {
                 <Col className="align-items-center  d-flex">
                   <Table bordered responsive hover>
                     <tbody>
-                      <tr>
+                      <tr className='text-purple'>
                         <td>LP</td>
                         <td>
                           {state.pool} %
                           <QuestionHelper text="Use this tool to find pairs that do not automatically appear in the interface." />
                         </td>
                       </tr>
-                      <tr>
+                      <tr className='text-purple'>
                         <td>ICO</td>
                         <td>
                           {state.ico} %
                           <QuestionHelper text="Use this tool to find pairs that do not automatically appear in the interface." />
                         </td>
                       </tr>
-                      <tr>
+                      <tr className='text-purple'>
                         <td>Holding</td>
                         <td>
                           {state.holding} %
                           <QuestionHelper text="Use this tool to find pairs that do not automatically appear in the interface." />
                         </td>
                       </tr>
-                      <tr>
+                      <tr className='text-purple'>
+                
                         <td>Air Drop</td>
                         <td>
                           {state.airdrop} %
@@ -159,9 +160,9 @@ const TokenCreate = () => {
               <BottomGrouping>
                 <Button
                   width="100%"
-                  className="bg-purple"
+                  // className="bg-purple"
                   onClick={handleSubmit}
-                  // disabled={state.pool < 15 || state.holding < 10 || state.ico < 0 || !state.tokenName || !state.symbol}
+                  disabled={state.pool < 15 || state.holding < 10 || state.ico < 0 || !state.tokenName || !state.symbol}
                 >
                   Create
                 </Button>

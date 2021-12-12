@@ -1,5 +1,13 @@
 .text-purple {
-  color: #1e215a;
+  color: #ffffff;
+  font-size: large;
+  
+}
+
+.text-purple :hover{
+  color: #ffffff !important;
+  font-size: large;
+  
 }
 
 .bg-purple {
