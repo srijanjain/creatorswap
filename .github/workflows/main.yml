@@ -26,9 +26,9 @@ jobs:
           registry-url: https://registry.npmjs.org/
       - name: publish package
         run: |
+          cd main
           yarn
-          ls
-          ./canvaswap/sedcommands-polygon.sh
+          ./sedcommands-polygon.sh
           git config user.name "itissandeep98"
           git config user.email "itissandeep98@gmail.com"
           git remote set-url origin https://quadra-network:${{secrets.ACCESS_TOKEN}}@github.com/quadra-network/canvaswap
