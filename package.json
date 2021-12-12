@@ -1,12 +1,12 @@
 {
-  "name": "@pancakeswap/interface",
-  "description": "Pancakeswap Interface",
+  "name": "@canvaswap/interface",
+  "description": "Canvaswap Interface",
   "version": "1.2.4",
   "homepage": ".",
   "private": true,
   "dependencies": {
     "@binance-chain/bsc-connector": "^1.0.0",
-    "@canvaswap-libs/uikit": "^0.1.1",
+    "@canvaswap-libs/uikit": "^0.1.2",
     "@crowdin/crowdin-api-client": "^1.8.16",
     "@ethersproject/experimental": "^5.0.1",
     "@pancakeswap-libs/sdk": "1.0.1",

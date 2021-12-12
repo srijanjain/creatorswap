@@ -13,4 +13,3 @@ jobs:
       - uses: wagoid/commitlint-github-action@v2
         with:
           configFile: .commitlintrc.json
-          helpURL: https://docs.pancakeswap.finance/code/contributing#committing

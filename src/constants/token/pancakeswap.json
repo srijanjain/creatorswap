@@ -1,5 +1,5 @@
 {
-  "name": "PancakeSwap Default List",
+  "name": "CanvaSwap Default List",
   "timestamp": "2021-03-17T09:56:23Z",
   "version": {
     "major": 2,
@@ -7,7 +7,7 @@
     "patch": 0
   },
   "tags": {},
-  "logoURI": "https://exchange.pancakeswap.finance/images/pancakeswap.png",
+  "logoURI": "https://canvaswap.ml/images/pancakeswap.png",
   "keywords": ["pancake", "default"],
   "tokens": [
     {
@@ -16,7 +16,7 @@
       "address": "0xD34C1b38D04880a4782a2008D9bCDFa4402e4dCA",
       "chainId": 80001,
       "decimals": 18,
-      "logoURI": "https://exchange.pancakeswap.finance/images/coins/0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c.png"
+      "logoURI": "https://canvaswap.ml/images/coins/0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c.png"
     },
     {
       "name": "Canvas Token",
@@ -24,7 +24,7 @@
       "address": "0x76514486123bCdB30e324ED1a78b54b389Ea6769",
       "chainId": 80001,
       "decimals": 18,
-      "logoURI": "https://exchange.pancakeswap.finance/images/coins/0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c.png"
+      "logoURI": "https://canvaswap.ml/images/coins/0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c.png"
     },
     {
       "name": "Tanmay Coin",
@@ -32,7 +32,7 @@
       "address": "0x490351a9D88a56c9325bD360546FaeA17391dbbA",
       "chainId": 80001,
       "decimals": 18,
-      "logoURI": "https://exchange.pancakeswap.finance/images/coins/0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c.png"
+      "logoURI": "https://canvaswap.ml/images/coins/0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c.png"
     },
     {
       "name": "Samay Coin",
@@ -40,7 +40,7 @@
       "address": "0x30aCdF58b8a5853E08Cf6265ED2C8627D247e5b9",
       "chainId": 80001,
       "decimals": 18,
-      "logoURI": "https://exchange.pancakeswap.finance/images/coins/0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c.png"
+      "logoURI": "https://canvaswap.ml/images/coins/0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c.png"
     },
     {
       "name": "MKBHD Coin",
@@ -48,7 +48,7 @@
       "address": "0xcB8ae9bFC3b597b5bF58335506599C3ac20Db25F",
       "chainId": 80001,
       "decimals": 18,
-      "logoURI": "https://exchange.pancakeswap.finance/images/coins/0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c.png"
+      "logoURI": "https://canvaswap.ml/images/coins/0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c.png"
     },
     {
       "name": "Sentdex Coin",
@@ -56,7 +56,7 @@
       "address": "0xF713E8E7b7e2D91200b4BBb74De4FfE75CBF47dC",
       "chainId": 80001,
       "decimals": 18,
-      "logoURI": "https://exchange.pancakeswap.finance/images/coins/0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c.png"
+      "logoURI": "https://canvaswap.ml/images/coins/0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c.png"
     },
     {
       "name": "Beast Coin",
@@ -64,7 +64,7 @@
       "address": "0x10C0F976762b65acF8f92B32A233968A23a45264",
       "chainId": 80001,
       "decimals": 18,
-      "logoURI": "https://exchange.pancakeswap.finance/images/coins/0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c.png"
+      "logoURI": "https://canvaswap.ml/images/coins/0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c.png"
     },
     {
       "name": "The Viral Fever Coin",
@@ -72,7 +72,7 @@
       "address": "0x6Cf8391c733C25c5eb8F186DedE955171A34BD46",
       "chainId": 80001,
       "decimals": 18,
-      "logoURI": "https://exchange.pancakeswap.finance/images/coins/0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c.png"
+      "logoURI": "https://canvaswap.ml/images/coins/0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c.png"
     }
   ]
 }
