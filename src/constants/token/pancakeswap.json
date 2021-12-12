@@ -11,8 +11,8 @@
   "keywords": ["pancake", "default"],
   "tokens": [
     {
-      "name": "WBNB Token",
-      "symbol": "WBNB",
+      "name": "WETH Token",
+      "symbol": "WETH",
       "address": "0xD34C1b38D04880a4782a2008D9bCDFa4402e4dCA",
       "chainId": 80001,
       "decimals": 18,
@@ -20,48 +20,56 @@
     },
     {
       "name": "Canvas Token",
-      "symbol": "Can",
+      "symbol": "CAN",
       "address": "0x76514486123bCdB30e324ED1a78b54b389Ea6769",
       "chainId": 80001,
       "decimals": 18,
       "logoURI": "https://exchange.pancakeswap.finance/images/coins/0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c.png"
     },
     {
-      "name": "ANSHUL Token",
-      "symbol": "CHHOTA",
-      "address": "0x40fe25d7a6fa36fb99f0316b293eBD4762408ff4",
+      "name": "Tanmay Coin",
+      "symbol": "TANBH",
+      "address": "0x490351a9D88a56c9325bD360546FaeA17391dbbA",
       "chainId": 80001,
       "decimals": 18,
       "logoURI": "https://exchange.pancakeswap.finance/images/coins/0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c.png"
     },
     {
-      "name": "SANDY Token",
-      "symbol": "SANDY",
-      "address": "0x51F6c7Ad98B1a644452ECf05eDDCa70FD5ec0A30",
+      "name": "Samay Coin",
+      "symbol": "SMRA",
+      "address": "0x30aCdF58b8a5853E08Cf6265ED2C8627D247e5b9",
       "chainId": 80001,
       "decimals": 18,
       "logoURI": "https://exchange.pancakeswap.finance/images/coins/0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c.png"
     },
     {
-      "name": "UTSAV Token",
-      "symbol": "UTS",
-      "address": "0xb859980c32Da9b98FfF9B18CA04ee97D6bf10A8F",
+      "name": "MKBHD Coin",
+      "symbol": "MKBHD",
+      "address": "0xcB8ae9bFC3b597b5bF58335506599C3ac20Db25F",
       "chainId": 80001,
       "decimals": 18,
       "logoURI": "https://exchange.pancakeswap.finance/images/coins/0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c.png"
     },
     {
-      "name": "KABIR Token",
-      "symbol": "KSM",
-      "address": "0x29fcDa8965D417d7CE981e941c90b87099504AE9",
+      "name": "Sentdex Coin",
+      "symbol": "SENT",
+      "address": "0xF713E8E7b7e2D91200b4BBb74De4FfE75CBF47dC",
       "chainId": 80001,
       "decimals": 18,
       "logoURI": "https://exchange.pancakeswap.finance/images/coins/0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c.png"
     },
     {
-      "name": "Heemank Coin",
-      "symbol": "heemv",
-      "address": "0x31C6F857a19639f19A9460b6D6157A50CC77e77D",
+      "name": "Beast Coin",
+      "symbol": "BEAST",
+      "address": "0x10C0F976762b65acF8f92B32A233968A23a45264",
+      "chainId": 80001,
+      "decimals": 18,
+      "logoURI": "https://exchange.pancakeswap.finance/images/coins/0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c.png"
+    },
+    {
+      "name": "The Viral Fever Coin",
+      "symbol": "TVF",
+      "address": "0x6Cf8391c733C25c5eb8F186DedE955171A34BD46",
       "chainId": 80001,
       "decimals": 18,
       "logoURI": "https://exchange.pancakeswap.finance/images/coins/0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c.png"

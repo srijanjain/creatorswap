@@ -12,7 +12,7 @@ function ConfirmModal({ isOpen, onDismiss, contract }) {
           <Col>
             <Text color="secondary" fontSize="15px">
               Token Deployed Successfully{' '}
-              <a href={`https://testnet.bscscan.com/address/${contract}`} target="_blank" rel="noreferrer">
+              <a href={`https://mumbai.polygonscan.com/address/${contract}`} target="_blank" rel="noreferrer">
                 {contract}
               </a>
             </Text>

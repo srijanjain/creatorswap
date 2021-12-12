@@ -135,7 +135,7 @@ export default function Pool() {
             </div>
           </Row>
 
-          <Button id="join-pool-button" as={Link} to="/add/BNB">
+          <Button id="join-pool-button" as={Link} to="/add">
             {TranslateString(168, 'Add Liquidity')}
           </Button>
 

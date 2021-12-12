@@ -13,7 +13,7 @@ export default function index() {
               <div className="face face1">
                 <div className="content">
                   <div className="icon">
-                    <a href="/" className="view_token" target="_blank" rel="noreferrer">
+                    <a href={`https://mumbai.polygonscan.com/address/${card.address}`} className="view_token" target="_blank" rel="noreferrer">
                       View Token <span className="fa fa-external-link" />
                     </a>
                     <img src={card.icon} alt="profile" className="rounded-circle" />

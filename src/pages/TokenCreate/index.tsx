@@ -93,24 +93,24 @@ const TokenCreate = () => {
                   <Table bordered responsive hover>
                     <tbody>
                       <tr className='text-purple'>
-                        <td>LP</td>
+                        <td>Provide Liquidity</td>
                         <td>
                           {state.pool} %
-                          <QuestionHelper text="Use this tool to find pairs that do not automatically appear in the interface." />
+                          <QuestionHelper text="Percentage of Token you want to provide for liquidity pool. This is done so more people can buy token and earn rewards" />
                         </td>
                       </tr>
                       <tr className='text-purple'>
-                        <td>ICO</td>
+                        <td>Initial Coin Offering</td>
                         <td>
                           {state.ico} %
-                          <QuestionHelper text="Use this tool to find pairs that do not automatically appear in the interface." />
+                          <QuestionHelper text="Percentage of Tokens you want to provide for Buying." />
                         </td>
                       </tr>
                       <tr className='text-purple'>
                         <td>Holding</td>
                         <td>
                           {state.holding} %
-                          <QuestionHelper text="Use this tool to find pairs that do not automatically appear in the interface." />
+                          <QuestionHelper text="Percentage of Tokens you'll keep for yourself for future liquidity." />
                         </td>
                       </tr>
                       <tr className='text-purple'>
@@ -118,7 +118,7 @@ const TokenCreate = () => {
                         <td>Air Drop</td>
                         <td>
                           {state.airdrop} %
-                          <QuestionHelper text="Use this tool to find pairs that do not automatically appear in the interface." />
+                          <QuestionHelper text="Percentage of Token distributed among community to spread the reach of coin." />
                         </td>
                       </tr>
                     </tbody>

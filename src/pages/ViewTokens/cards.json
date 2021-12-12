@@ -10,7 +10,8 @@
     "twitter": "https://twitter.com/tanmaybhat",
     "price": 480,
     "token": "TANBH",
-    "icon": "https://yt3.ggpht.com/ytc/AKedOLT9XORVoWun03bQR2l4zH5aBz1PpD8jMF3ZFp5htg=s88-c-k-c0x00ffffff-no-rj"
+    "icon": "https://yt3.ggpht.com/ytc/AKedOLT9XORVoWun03bQR2l4zH5aBz1PpD8jMF3ZFp5htg=s88-c-k-c0x00ffffff-no-rj",
+    "address":"0x490351a9D88a56c9325bD360546FaeA17391dbbA"
   },
   {
     "title": "Samay Raina",
@@ -23,7 +24,8 @@
     "twitter": "https://twitter.com/tanmaybhat",
     "price": 400,
     "token": "SMRA",
-    "icon": "https://yt3.ggpht.com/ytc/AKedOLSAAX9t_iv6FTNCV1r83YQC7gBJZNcQ0sKq9yZs3Q=s88-c-k-c0x00ffffff-no-rj"
+    "icon": "https://yt3.ggpht.com/ytc/AKedOLSAAX9t_iv6FTNCV1r83YQC7gBJZNcQ0sKq9yZs3Q=s88-c-k-c0x00ffffff-no-rj",
+    "address":"0x30aCdF58b8a5853E08Cf6265ED2C8627D247e5b9"
   },
   {
     "title": "Marques Brownlee",
@@ -36,7 +38,8 @@
     "twitter": "https://twitter.com/tanmaybhat",
     "price": 450,
     "token": "MKBHD",
-    "icon": "https://yt3.ggpht.com/lkH37D712tiyphnu0Id0D5MwwQ7IRuwgQLVD05iMXlDWO-kDHut3uI4MgIEAQ9StK0qOST7fiA=s88-c-k-c0x00ffffff-no-rj"
+    "icon": "https://yt3.ggpht.com/lkH37D712tiyphnu0Id0D5MwwQ7IRuwgQLVD05iMXlDWO-kDHut3uI4MgIEAQ9StK0qOST7fiA=s88-c-k-c0x00ffffff-no-rj",
+    "address":"0xcB8ae9bFC3b597b5bF58335506599C3ac20Db25F"
   },
   {
     "title": "sentdex",
@@ -49,7 +52,8 @@
     "twitter": "https://twitter.com/tanmaybhat",
     "price": 300,
     "token": "SENT",
-    "icon": "https://yt3.ggpht.com/ytc/AKedOLS4PrPaM3XUymase4vM38wnsSYY803EreFCHVoatg=s88-c-k-c0x00ffffff-no-rj"
+    "icon": "https://yt3.ggpht.com/ytc/AKedOLS4PrPaM3XUymase4vM38wnsSYY803EreFCHVoatg=s88-c-k-c0x00ffffff-no-rj",
+    "address":"0xF713E8E7b7e2D91200b4BBb74De4FfE75CBF47dC"
   },
   {
     "title": "MrBeast",
@@ -62,7 +66,8 @@
     "twitter": "https://twitter.com/tanmaybhat",
     "price": 300,
     "token": "BEAST",
-    "icon": "https://yt3.ggpht.com/ytc/AKedOLTctGKJ32CdDLiSZ64JyktSvRZWMo6v7TTj5Gx_IA=s88-c-k-c0x00ffffff-no-rj"
+    "icon": "https://yt3.ggpht.com/ytc/AKedOLTctGKJ32CdDLiSZ64JyktSvRZWMo6v7TTj5Gx_IA=s88-c-k-c0x00ffffff-no-rj",
+    "address":"0x10C0F976762b65acF8f92B32A233968A23a45264"
   },
   {
     "title": "The Viral Fever",
@@ -75,6 +80,7 @@
     "twitter": "https://twitter.com/tanmaybhat",
     "price": 500,
     "token": "TVF",
-    "icon": "https://yt3.ggpht.com/ytc/AKedOLSMKxpcCRD_mO-B01VxY5JUSpoDYLDzrPL_2jSe5w=s88-c-k-c0x00ffffff-no-rj"
+    "icon": "https://yt3.ggpht.com/ytc/AKedOLSMKxpcCRD_mO-B01VxY5JUSpoDYLDzrPL_2jSe5w=s88-c-k-c0x00ffffff-no-rj",
+    "address":"0x6Cf8391c733C25c5eb8F186DedE955171A34BD46"
   }
 ]

@@ -8,12 +8,13 @@ type ChainTokenList = {
 }
 
 export const Can = new Token(ChainId.BSCTESTNET, '0x76514486123bCdB30e324ED1a78b54b389Ea6769', 18, 'CAN', 'Canvas Token')
-export const WBNB = new Token(ChainId.BSCTESTNET, '0xD34C1b38D04880a4782a2008D9bCDFa4402e4dCA', 18, 'WBNB', 'Wrapped BNB')
-export const heemv = new Token(ChainId.BSCTESTNET, '0x31C6F857a19639f19A9460b6D6157A50CC77e77D', 18, 'HEEMV', 'Heemank Token')
-export const SANDY = new Token(ChainId.BSCTESTNET, '0x51F6c7Ad98B1a644452ECf05eDDCa70FD5ec0A30', 18, 'SANDY', 'Sandy coin')
-export const UTS = new Token(ChainId.BSCTESTNET, '0xb859980c32Da9b98FfF9B18CA04ee97D6bf10A8F', 18, 'UTS', 'Utsav Token')
-export const KSM = new Token(ChainId.BSCTESTNET, '0x29fcDa8965D417d7CE981e941c90b87099504AE9', 18, 'KSM', 'KABIR Token')
-export const CHHOTA = new Token(ChainId.BSCTESTNET, '0x40fe25d7a6fa36fb99f0316b293eBD4762408ff4', 18, 'CHHOTA', 'CHOTTA ANSHUL coin')
+export const ETH = new Token(ChainId.BSCTESTNET, '0xD34C1b38D04880a4782a2008D9bCDFa4402e4dCA', 18, 'ETH', 'Wrapped ETH')
+export const TANBH = new Token(ChainId.BSCTESTNET, '0x490351a9D88a56c9325bD360546FaeA17391dbbA', 18, 'TANBH', 'Tanmay Coin')
+export const SMRA = new Token(ChainId.BSCTESTNET, '0x30aCdF58b8a5853E08Cf6265ED2C8627D247e5b9', 18, 'SMRA', 'Samay Coin')
+export const MKBHD = new Token(ChainId.BSCTESTNET, '0xcB8ae9bFC3b597b5bF58335506599C3ac20Db25F', 18, 'MKBHD', 'MKBHD Coin')
+export const SENT = new Token(ChainId.BSCTESTNET, '0xF713E8E7b7e2D91200b4BBb74De4FfE75CBF47dC', 18, 'SENT', 'SentDex Coin')
+export const BEAST = new Token(ChainId.BSCTESTNET, '0x10C0F976762b65acF8f92B32A233968A23a45264', 18, 'BEAST', 'Beast Coin')
+export const TVF  = new Token(ChainId.BSCTESTNET, '0x6Cf8391c733C25c5eb8F186DedE955171A34BD46', 18, 'TVF', 'TVF Coin')
 // export const ETH = new Token(ChainId.BSCTESTNET, '0xE282a15DBad45e3131620C1b8AF85B7330Cb3b4B', 18, 'ETH', 'Binance-Peg Ethereum Token')
 
 const WETH_ONLY: ChainTokenList = {
@@ -24,7 +25,7 @@ const WETH_ONLY: ChainTokenList = {
 // used to construct intermediary pairs for trading
 export const BASES_TO_CHECK_TRADES_AGAINST: ChainTokenList = {
   ...WETH_ONLY,
-  [ChainId.BSCTESTNET]: [...WETH_ONLY[ChainId.BSCTESTNET], SANDY, UTS, KSM, CHHOTA, heemv, Can],
+  [ChainId.BSCTESTNET]: [...WETH_ONLY[ChainId.BSCTESTNET], SMRA, MKBHD, SENT, BEAST, TANBH, Can, TVF],
 }
 
 /**
@@ -38,19 +39,19 @@ export const CUSTOM_BASES: { [chainId in ChainId]?: { [tokenAddress: string]: To
 // used for display in the default list when adding liquidity
 export const SUGGESTED_BASES: ChainTokenList = {
   ...WETH_ONLY,
-  [ChainId.BSCTESTNET]: [...WETH_ONLY[ChainId.BSCTESTNET], SANDY, UTS, KSM, CHHOTA, heemv, Can],
+  [ChainId.BSCTESTNET]: [...WETH_ONLY[ChainId.BSCTESTNET], SMRA, MKBHD, SENT, BEAST, TANBH, Can, TVF],
 }
 
 // used to construct the list of all pairs we consider by default in the frontend
 export const BASES_TO_TRACK_LIQUIDITY_FOR: ChainTokenList = {
   ...WETH_ONLY,
-  [ChainId.BSCTESTNET]: [...WETH_ONLY[ChainId.BSCTESTNET], SANDY, UTS, KSM, CHHOTA, heemv, Can],
+  [ChainId.BSCTESTNET]: [...WETH_ONLY[ChainId.BSCTESTNET], SMRA, MKBHD, SENT, BEAST, TANBH, Can, TVF],
 }
 
 export const PINNED_PAIRS: { readonly [chainId in ChainId]?: [Token, Token][] } = {
   [ChainId.BSCTESTNET]: [
-    [Can, WBNB],
-    [SANDY, UTS],
+    [Can, ETH],
+    [SMRA, MKBHD],
   ],
 }
 
