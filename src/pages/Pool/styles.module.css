@@ -57,17 +57,28 @@
 .card{
     width: 80% !important;
     border-radius:  20px !important;
+<<<<<<< HEAD
     background-color: #1e215a !important;
+=======
+>>>>>>> origin/polygon-canvaswap
 }
 
 .card_img_top {
     position: absolute;
+<<<<<<< HEAD
     top: -300px;
     left: 48%;
     margin-left: -30px;
     width: 600px !important;
     height: 600px;
 
+=======
+    top: -40px;
+    left: 49%;
+    margin-left: -30px;
+    width: 90px !important;
+    height: 90px;
+>>>>>>> origin/polygon-canvaswap
 }
 
 @media (max-width: 800px) {

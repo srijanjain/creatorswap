@@ -28,7 +28,11 @@ const PageHeader = ({ title, description, children }: PageHeaderProps) => {
   return (
     <StyledPageHeader>
       <Flex alignItems="center">
+<<<<<<< HEAD
         <Details style={{ textAlign: 'center', paddingLeft: '90px' }}>
+=======
+        <Details style={{textAlign: 'center', paddingLeft: '90px'}}>
+>>>>>>> origin/polygon-canvaswap
           <Heading mb="8px">{title}</Heading>
           {description && (
             <Text color="textSubtle" fontSize="14px">

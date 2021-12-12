@@ -17,8 +17,12 @@ import { EN, allLanguages } from '../constants/localisation/languageCodes'
 import { LanguageContext } from '../hooks/LanguageContext'
 import { TranslationsContext } from '../hooks/TranslationsContext'
 
+<<<<<<< HEAD
 import 'bootstrap/dist/css/bootstrap.css'
 import 'font-awesome/css/font-awesome.css'
+=======
+import 'bootstrap/dist/css/bootstrap.css';
+>>>>>>> origin/polygon-canvaswap
 // import'bootstrap/dist/css/bootstrap-theme.css';
 
 import Menu from '../components/Menu'
@@ -42,7 +46,11 @@ const BodyWrapper = styled.div`
   overflow-x: hidden;
   z-index: 1;
   justify-content: center;
+<<<<<<< HEAD
   background-color: #14163b;
+=======
+  background-color: #42C0FB;
+>>>>>>> origin/polygon-canvaswap
   background-repeat: no-repeat;
   background-position: bottom 24px center;
   background-size: 90%;

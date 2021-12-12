@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .partl {
   width: 45% !important;
   /* margin-right: 10% !important; */
@@ -71,3 +72,79 @@
     width: 100% !important;
   }
 }
+=======
+.partl{
+    width: 45% !important;
+    /* margin-right: 10% !important; */
+}
+
+.partm{
+    width: 10% !important;
+}
+
+.partr{
+    width: 45% !important;
+    /* margin-right: 10% !important; */
+}
+
+.synccontainer{
+    margin-left: 25% !important;
+    margin-top: 25% !important;
+}
+
+.partlb{
+    width: 50% !important;
+}
+
+
+.partrb{
+    width: 50% !important;
+}
+
+.partb{
+    width: 100% !important;
+    /* margin-left: 20% !important;
+    margin-right: 20% !important; */
+}
+
+.partb1{
+    /* margin-left: 20% !important; */
+    margin-right: 10% !important;
+    width: 40% !important;
+}
+
+.partb2{
+    margin-left: 10% !important;
+    /* margin-right: 20% !important; */
+    width: 40% !important;
+}
+
+.button{
+    margin-left: 20% !important;
+    margin-right: 20% !important;
+    width: 60% !important;
+}
+
+
+.card{
+    width: 80% !important;
+    border-radius:  20px !important;
+    margin-top: 30px;
+    padding-top: 30px;
+}
+
+.card_img_top {
+    position: absolute;
+    top: -40px;
+    left: 49%;
+    margin-left: -30px;
+    width: 90px !important;
+    height: 90px;
+}
+
+@media (max-width: 800px) {
+    .card{
+        width: 100% !important;
+    }
+}
+>>>>>>> origin/polygon-canvaswap
