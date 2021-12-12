@@ -3,7 +3,7 @@
 }
 
 .bg-purple {
-  background-color: #1e215a;
+  background-color: #1e215a !important;
 }
 
 .card {
