@@ -73,7 +73,7 @@ const TokenCreate = () => {
     <>
       <ConfirmModal isOpen={modal} onDismiss={toggleModal} contract={state.contract} />
 
-      <Card className="card">
+      <Card className="card bg-purple">
         <img className="card_img_top img-circle rounded-circle" src={Logo} alt="logo" />
         <Container>
           <Row>
