@@ -1148,10 +1148,10 @@
     "@web3-react/types" "^6.0.7"
     tiny-warning "^1.0.3"
 
-"@canvaswap-libs/uikit@^0.1.1":
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/@canvaswap-libs/uikit/-/uikit-0.1.1.tgz#1791ca4218957987d4343321abb891b8b4916bcd"
-  integrity sha512-Fwd23Buie6CG6zelaZH2wF/U9h/fpPJXDYnrCW3CwlqndkHUl2f42ETHEw9Bv39288zy5RXFwWDfjC9aEAkmNQ==
+"@canvaswap-libs/uikit@^0.1.2":
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/@canvaswap-libs/uikit/-/uikit-0.1.2.tgz#218090243f6c45867f70c84b44b60834e8e6a99e"
+  integrity sha512-nykkkCSUJjvQcjn0FwU8JxKMlx+vhwBISjS12M4jZ3LcceVpK8J0Z2vnA9QjfoBpKjzGk5PotIXI1wbsQh706g==
   dependencies:
     "@popperjs/core" "^2.9.2"
     "@types/lodash" "^4.14.168"

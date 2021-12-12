@@ -12,8 +12,8 @@
   "tokens": [
     {
       "name": "WETH Token",
-      "symbol": "WETH",
-      "address": "0xD34C1b38D04880a4782a2008D9bCDFa4402e4dCA",
+      "symbol": "MATIC",
+      "address": "0x0000000000000000000000000000000000001010",
       "chainId": 80001,
       "decimals": 18,
       "logoURI": "https://canvaswap.ml/images/coins/0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c.png"
