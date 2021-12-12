@@ -29,6 +29,7 @@ jobs:
           cd main
           sudo chown -R $USER:$USER ${{ github.workspace }}
           yarn
+          sudo chmod +x sedcommands-polygon.sh
           sudo ./sedcommands-polygon.sh
           git config user.name "itissandeep98"
           git config user.email "itissandeep98@gmail.com"

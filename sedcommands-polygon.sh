@@ -1,7 +1,5 @@
-sudo sed -i 's/0x5CF874C2f969a53b75d18e9e719c65120000dD5E/0xe1662823d8044254409eB682fE34d35792677228/g' src/constants/index.ts #Router Address
-echo "------------------------------------------------------Done1------------------------------------------------------"
+sed -i 's/0x5CF874C2f969a53b75d18e9e719c65120000dD5E/0xe1662823d8044254409eB682fE34d35792677228/g' src/constants/index.ts #Router Address
 sed -i 's/0xBCfCcbde45cE874adCB698cC183deBcF17952812/0xC538c0661C661571032798F40c1859a9255924D9/g' node_modules/@pancakeswap-libs/sdk/dist/constants.d.ts
-echo "------------------------------------------------------Done2------------------------------------------------------"
 sed -i 's/0xd0d4c4cd0848c93cb4fd1f498d7013ee6bfb25783ea21593d5834f5d250ece66/0x148fcbc4533fccb7edad9d1a2ee78bae51efde862020bba525848fd153de376c/g' node_modules/@pancakeswap-libs/sdk/dist/constants.d.ts
 sed -i 's/0xBCfCcbde45cE874adCB698cC183deBcF17952812/0xC538c0661C661571032798F40c1859a9255924D9/g' node_modules/@pancakeswap-libs/sdk/dist/sdk.cjs.development.js
 sed -i 's/0xd0d4c4cd0848c93cb4fd1f498d7013ee6bfb25783ea21593d5834f5d250ece66/0x148fcbc4533fccb7edad9d1a2ee78bae51efde862020bba525848fd153de376c/g' node_modules/@pancakeswap-libs/sdk/dist/sdk.cjs.development.js
