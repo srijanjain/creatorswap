@@ -444,10 +444,7 @@ export default function RemoveLiquidity({
       <br />
       <br />
       <Card className={styles.card}>
-        <img
-          className={`${styles.card_img_top} img-circle rounded-circle`}
-          src={`${process.env.PUBLIC_URL}/icons/liquidity_grey.svg`}
-        />
+        <img className={`${styles.card_img_top} img-circle rounded-circle`} src="/icons/liquidity_grey.svg" />
         <br />
         <br />
         <br />

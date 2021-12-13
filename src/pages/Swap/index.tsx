@@ -295,10 +295,7 @@ const Swap = () => {
       <SafeMoonWarningModal isOpen={transactionWarning.selectedToken === 'SAFEMOON'} onConfirm={handleConfirmWarning} />
       {/* <CardNav /> */}
       <Card className={styles.card}>
-        <img
-          className={`${styles.card_img_top} img-circle rounded-circle`}
-          src={`${process.env.PUBLIC_URL}/icons/swap_grey.svg`}
-        />
+        <img className={`${styles.card_img_top} img-circle rounded-circle`} src="/icons/swap_grey.svg" />
         <Wrapper id="swap-page">
           <ConfirmSwapModal
             isOpen={showConfirm}
